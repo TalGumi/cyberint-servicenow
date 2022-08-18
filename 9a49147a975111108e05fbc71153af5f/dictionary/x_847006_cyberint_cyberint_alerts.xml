@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="CyberInt Alerts" max_length="40" name="x_847006_cyberint_cyberint_alerts" type="collection">
+    <element label="CyberInt Alerts" max_length="40" name="x_847006_cyberint_cyberint_alerts" sizeclass="4" type="collection">
         <element label="Alert ID" max_length="40" name="alert_id" type="integer"/>
         <element label="Closing reason" max_length="40" name="closing_reason" type="string"/>
         <element label="Closing time" max_length="40" name="closing_time" type="glide_date_time"/>
