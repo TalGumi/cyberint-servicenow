@@ -8,7 +8,7 @@
         <hint/>
         <homepage/>
         <image/>
-        <link_type>DETAIL</link_type>
+        <link_type>NEW</link_type>
         <map_page/>
         <mobile_title>Configuration</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
@@ -24,7 +24,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>498b103e975111108e05fbc71153afa4</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Configuration</sys_name>
         <sys_overrides/>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -32,7 +32,7 @@
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_app_module_498b103e975111108e05fbc71153afa4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-18 11:13:59</sys_updated_on>
+        <sys_updated_on>2022-08-23 07:35:18</sys_updated_on>
         <timeline_page/>
         <title>Configuration</title>
         <uncancelable>false</uncancelable>

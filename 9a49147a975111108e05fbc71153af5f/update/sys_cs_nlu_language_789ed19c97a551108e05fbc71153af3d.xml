@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_nlu_language">
+    <sys_cs_nlu_language action="INSERT_OR_UPDATE">
+        <enabled>false</enabled>
+        <language display_value="Danish">b49ed19c97a551108e05fbc71153af3d</language>
+        <sys_class_name>sys_cs_nlu_language</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-22 07:00:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>789ed19c97a551108e05fbc71153af3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_cs_nlu_language_789ed19c97a551108e05fbc71153af3d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-22 07:00:05</sys_updated_on>
+    </sys_cs_nlu_language>
+</record_update>

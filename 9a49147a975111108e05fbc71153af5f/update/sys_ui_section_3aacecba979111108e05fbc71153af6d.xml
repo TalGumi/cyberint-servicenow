@@ -4,41 +4,41 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>b9dce0fa979111108e05fbc71153afd2</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>3b227a60976111108e05fbc71153afae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>status</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>3ddce0fa979111108e05fbc71153afd2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>alert_id</element>
-            <position>2</position>
+            <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>bddce0fa979111108e05fbc71153afd2</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>bb227a60976111108e05fbc71153afae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>3f227a60976111108e05fbc71153afae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>severity</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>31dce0fa979111108e05fbc71153afd3</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>bf227a60976111108e05fbc71153afae</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>sys_created_on</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>b1dce0fa979111108e05fbc71153afd3</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>33227a60976111108e05fbc71153afaf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>sys_updated_on</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>35dce0fa979111108e05fbc71153afd3</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>b3227a60976111108e05fbc71153afaf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>.split</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>b5dce0fa979111108e05fbc71153afd3</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>37227a60976111108e05fbc71153afaf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>closing_user</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>39dce0fa979111108e05fbc71153afd3</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>b7227a60976111108e05fbc71153afaf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>closing_reason</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>b9dce0fa979111108e05fbc71153afd3</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>3b227a60976111108e05fbc71153afaf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>closing_time</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:31:55</sys_created_on>
-            <sys_id>3ddce0fa979111108e05fbc71153afd3</sys_id>
+            <sys_created_on>2022-08-23 07:43:52</sys_created_on>
+            <sys_id>bb227a60976111108e05fbc71153afaf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_847006_cyberint_cyberint_alerts" sys_domain="global" view="Default view">3aacecba979111108e05fbc71153af6d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 11:31:55</sys_updated_on>
+            <sys_updated_on>2022-08-23 07:43:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

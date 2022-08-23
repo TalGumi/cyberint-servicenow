@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="97abaaa8972111108e05fbc71153af4a" sys_domain="global" table="x_847006_cyberint_cyberint_credentials" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-23 07:15:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1babaaa8972111108e05fbc71153af4d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_847006_cyberint_cyberint_credentials" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">97abaaa8972111108e05fbc71153af4a</sys_ui_form>
+            <sys_ui_section caption="Configuration Fields" display_value="Configuration Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">7c20310b979111108e05fbc71153af95</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-23 07:15:26</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-23 07:15:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>17abaaa8972111108e05fbc71153af4e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_847006_cyberint_cyberint_credentials" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">97abaaa8972111108e05fbc71153af4a</sys_ui_form>
+            <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-23 07:15:26</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_847006_cyberint_cyberint_credentials</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-23 07:15:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>97abaaa8972111108e05fbc71153af4a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_847006_cyberint_cyberint_credentials</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_97abaaa8972111108e05fbc71153af4a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-23 07:15:26</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
