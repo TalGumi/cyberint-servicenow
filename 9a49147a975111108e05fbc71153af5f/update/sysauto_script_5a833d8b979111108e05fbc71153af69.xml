@@ -16,20 +16,28 @@
         <run_start>2022-08-18 11:19:15</run_start>
         <run_time>1970-01-01 08:01:00</run_time>
         <run_type>daily</run_type>
-        <script><![CDATA[gs.log('script');
-alert('Hey');]]></script>
+        <script><![CDATA[// Only run this Scheduled Job if there are active Incidents over 30 days old
+var ga = new GlideAggregate('x_847006_cyberint_cyberint_alerts');
+ga.addAggregate('COUNT');
+ga.addQuery('status', 'open');
+// ga.addQuery('sys_created_on', '<', gs.daysAgo(30));
+ga.query();
+ga.next();
+ga.getAggregate('COUNT') !== '0';
+gs.addInfoMessage('Success!!');
+gs.log('Success!!BenSar');]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:21:28</sys_created_on>
         <sys_id>5a833d8b979111108e05fbc71153af69</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Pull</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_5a833d8b979111108e05fbc71153af69</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-18 11:21:28</sys_updated_on>
+        <sys_updated_on>2022-08-20 23:14:47</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>

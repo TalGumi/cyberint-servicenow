@@ -234,6 +234,7 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_15f561cf975111108e05fbc71153af83^id=15f561cf975111108e05fbc71153af83"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129^id=15f561cf975111108e05fbc71153af83"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=15f561cf975111108e05fbc71153af83"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=15f561cf975111108e05fbc71153af83^sys_idNOT IN59f561cf975111108e05fbc71153af9f"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -391,6 +392,10 @@
         <variable display_value="Connection Alias">7f64d24be7011010493520c343f6a999</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_95eeb235e7011010493520c343f6a983^id=5f58a543979111108e05fbc71153af76"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=5f58a543979111108e05fbc71153af76"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=5f58a543979111108e05fbc71153af76"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5f58a543979111108e05fbc71153af76"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_5f58a543979111108e05fbc71153af76"/>
     <sys_hub_action_input action="delete_multiple" query="model=77e4e54f975111108e05fbc71153af11^sys_idNOT INf8272103979111108e05fbc71153af20"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -473,6 +478,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f8272103979111108e05fbc71153af20"/>
     <sys_hub_action_output action="delete_multiple" query="model=77e4e54f975111108e05fbc71153af11^sys_idNOT IN15f561cf975111108e05fbc71153afb6,9df561cf975111108e05fbc71153afbc"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -557,6 +563,8 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=15f561cf975111108e05fbc71153afb6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=15f561cf975111108e05fbc71153afb6"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -640,6 +648,9 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9df561cf975111108e05fbc71153afbc"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9df561cf975111108e05fbc71153afbc"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=77e4e54f975111108e05fbc71153af11"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=77e4e54f975111108e05fbc71153af11^sys_idNOT INf1f4ad4f975111108e05fbc71153af28"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
         <action_type_id display_value="Theme List">77e4e54f975111108e05fbc71153af11</action_type_id>
@@ -650,6 +661,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-08-18 10:15:36</sys_updated_on>
     </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=f1f4ad4f975111108e05fbc71153af28"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_77e4e54f975111108e05fbc71153af11^sys_idNOT INb0272103979111108e05fbc71153af26"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>token</element>
@@ -674,6 +686,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_77e4e54f975111108e05fbc71153af11"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_77e4e54f975111108e05fbc71153af11^sys_idNOT IN19f561cf975111108e05fbc71153afbb,9df561cf975111108e05fbc71153afc4"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>__action_status__</element>
@@ -721,6 +734,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_77e4e54f975111108e05fbc71153af11"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=77e4e54f975111108e05fbc71153af11^sys_idNOT IN8af4658f975111108e05fbc71153af15"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Theme List">77e4e54f975111108e05fbc71153af11</action_id>
@@ -790,6 +804,8 @@
         <variable display_value="Don't Treat as Error">39f4258f975111108e05fbc71153afe7</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_35f4258f975111108e05fbc71153afc0^id=35f4258f975111108e05fbc71153afc0"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=35f4258f975111108e05fbc71153afc0"/>
+    <sys_hub_action_input action="delete_multiple" query="model=35f4258f975111108e05fbc71153afc0"/>
     <sys_hub_action_output action="delete_multiple" query="model=35f4258f975111108e05fbc71153afc0^sys_idNOT IN39f4258f975111108e05fbc71153afe7,b5f4258f975111108e05fbc71153afe0"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -874,6 +890,8 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=39f4258f975111108e05fbc71153afe7"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=39f4258f975111108e05fbc71153afe7"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -957,6 +975,9 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b5f4258f975111108e05fbc71153afe0"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b5f4258f975111108e05fbc71153afe0"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=35f4258f975111108e05fbc71153afc0"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=35f4258f975111108e05fbc71153afc0^sys_idNOT IN46f4258f975111108e05fbc71153aff5"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
         <action_type_id display_value="Theme List">35f4258f975111108e05fbc71153afc0</action_type_id>
@@ -967,6 +988,9 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-08-18 10:15:36</sys_updated_on>
     </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=46f4258f975111108e05fbc71153aff5"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_35f4258f975111108e05fbc71153afc0"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_35f4258f975111108e05fbc71153afc0"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_35f4258f975111108e05fbc71153afc0^sys_idNOT INb1f4258f975111108e05fbc71153afe6,f9f4258f975111108e05fbc71153afef"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>__action_status__</element>
@@ -1014,6 +1038,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_35f4258f975111108e05fbc71153afc0"/>
     <sys_hub_action_type_definition action="update">
         <sys_id>77e4e54f975111108e05fbc71153af11</sys_id>
         <latest_snapshot>35f4258f975111108e05fbc71153afc0</latest_snapshot>

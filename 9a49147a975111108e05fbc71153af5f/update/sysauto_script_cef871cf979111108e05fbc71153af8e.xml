@@ -5,30 +5,74 @@
         <condition/>
         <conditional>false</conditional>
         <entered_time/>
-        <name>Hey job try - tal</name>
+        <name>Cyberint_Puller_vr1</name>
         <offset/>
         <offset_type>0</offset_type>
         <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
-        <run_period>1970-01-02 00:01:00</run_period>
+        <run_period>1970-01-01 00:01:00</run_period>
         <run_start>2022-08-18 11:43:00</run_start>
         <run_time>1970-01-01 08:01:00</run_time>
         <run_type>periodically</run_type>
-        <script><![CDATA[alert('Hey');]]></script>
+        <script><![CDATA[(function executRule(current, previous) {
+    try {
+        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Default POST');
+
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+        gs.info("Response status: " + httpStatus);
+        //         gs.info("Response body: " + responseBody);
+
+        var responseObj = JSON.parse(responseBody);
+        gs.info("Total alerts: " + responseObj.total);
+
+        for (var i = 0; i < responseObj.alerts.length; i++) {
+	        var cia = new GlideRecord('x_847006_cyberint_cyberint_alerts');
+            cia.addQuery('alert_id', '=', responseObj.alerts[i].ref_id);
+            cia.query();
+            exist_alert = cia.next();
+            gs.info('Alert ' + responseObj.alerts[i].ref_id + ' exist in ServiceNow? ' + exist_alert);
+            if (!cia.alert_id) {
+                cia.initialize();
+                cia.alert_id = responseObj.alerts[i].ref_id;
+                cia.status = responseObj.alerts[i].status;
+                cia.description = responseObj.alerts[i].description;
+                cia.recommendation = responseObj.alerts[i].recommendation;
+                cia.source = responseObj.alerts[i].source;
+                cia.type = responseObj.alerts[i].type;
+                cia.category = responseObj.alerts[i].category;
+                cia.created_date = responseObj.alerts[i].created_date;
+                cia.severity = responseObj.alerts[i].severity;
+                cia.environment = responseObj.alerts[i].environment;
+                cia.created_date = responseObj.alerts[i].created_date;
+                cia.update_date = responseObj.alerts[i].modification_date;
+                cia.insert();
+                gs.info('Alert ' + cia.alert_id + ' Created');
+            }
+        }
+
+
+    } catch (ex) {
+        var message = ex.message;
+        gs.info(message);
+
+    }
+})(current, previous);]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Hey job try - tal</sys_name>
+        <sys_mod_count>96</sys_mod_count>
+        <sys_name>Cyberint_Puller_vr1</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-18 11:45:31</sys_updated_on>
+        <sys_updated_on>2022-08-24 07:20:40</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>

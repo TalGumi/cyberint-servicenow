@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="last_fetch_time" table="x_847006_cyberint_cyberint_credentials">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="category" table="x_847006_cyberint_cyberint_alerts">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Last fetch time</column_label>
+        <column_label>category</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,18 +27,18 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>last_fetch_time</element>
+        <element>category</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="">glide_date_time</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_847006_cyberint_cyberint_credentials</name>
+        <name>x_847006_cyberint_cyberint_alerts</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>true</read_only>
+        <read_only>false</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-08-23 07:03:14</sys_created_on>
-        <sys_id>799826e4972111108e05fbc71153af9b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Last fetch time</sys_name>
+        <sys_created_on>2022-08-24 05:42:44</sys_created_on>
+        <sys_id>edef9b3897a151108e05fbc71153afa7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>category</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
-        <sys_update_name>sys_dictionary_x_847006_cyberint_cyberint_credentials_last_fetch_time</sys_update_name>
+        <sys_update_name>sys_dictionary_x_847006_cyberint_cyberint_alerts_category</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-24 05:39:12</sys_updated_on>
+        <sys_updated_on>2022-08-24 05:42:44</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

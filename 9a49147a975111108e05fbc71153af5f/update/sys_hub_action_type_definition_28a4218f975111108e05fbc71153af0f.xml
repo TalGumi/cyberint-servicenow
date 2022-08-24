@@ -41,4 +41,14 @@
     </sys_hub_action_type_definition>
     <sys_translated_text action="delete_multiple" query="documentkey=28a4218f975111108e05fbc71153af0f"/>
     <sys_variable_value action="delete_multiple" query="document_key=28a4218f975111108e05fbc71153af0f"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=28a4218f975111108e05fbc71153af0f"/>
+    <sys_hub_action_input action="delete_multiple" query="model=28a4218f975111108e05fbc71153af0f"/>
+    <sys_hub_action_output action="delete_multiple" query="model=28a4218f975111108e05fbc71153af0f"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=28a4218f975111108e05fbc71153af0f"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=28a4218f975111108e05fbc71153af0f"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_28a4218f975111108e05fbc71153af0f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_28a4218f975111108e05fbc71153af0f"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_28a4218f975111108e05fbc71153af0f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_28a4218f975111108e05fbc71153af0f"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=28a4218f975111108e05fbc71153af0f"/>
 </record_update>

@@ -4,13 +4,13 @@
             <element>status</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-23 07:27:48</sys_created_on>
-            <sys_id>948e6a6c972111108e05fbc71153afe3</sys_id>
+            <sys_created_on>2022-08-24 05:39:54</sys_created_on>
+            <sys_id>356f133897a151108e05fbc71153af0b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-23 07:27:48</sys_updated_on>
+            <sys_updated_on>2022-08-24 05:39:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,27 +18,97 @@
             <element>severity</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-23 07:27:48</sys_created_on>
-            <sys_id>188e6a6c972111108e05fbc71153afe3</sys_id>
+            <sys_created_on>2022-08-24 05:39:54</sys_created_on>
+            <sys_id>b56f133897a151108e05fbc71153af0b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-23 07:27:48</sys_updated_on>
+            <sys_updated_on>2022-08-24 05:39:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>last_fetch_time</element>
+            <element>type</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-23 07:27:48</sys_created_on>
-            <sys_id>988e6a6c972111108e05fbc71153afe3</sys_id>
+            <sys_created_on>2022-08-24 05:39:54</sys_created_on>
+            <sys_id>396f133897a151108e05fbc71153af0b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-23 07:27:48</sys_updated_on>
+            <sys_updated_on>2022-08-24 05:39:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>category</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-24 05:39:54</sys_created_on>
+            <sys_id>b96f133897a151108e05fbc71153af0b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-24 05:39:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>environment</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-24 05:39:54</sys_created_on>
+            <sys_id>3d6f133897a151108e05fbc71153af0b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-24 05:39:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>source</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-24 05:39:54</sys_created_on>
+            <sys_id>bd6f133897a151108e05fbc71153af0b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-24 05:39:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-24 05:39:54</sys_created_on>
+            <sys_id>316f133897a151108e05fbc71153af0c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-24 05:39:54</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_fetch_time</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-24 05:39:54</sys_created_on>
+            <sys_id>b16f133897a151108e05fbc71153af0c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Fetch Fields" display_value="Fetch Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">dbab6aa8972111108e05fbc71153af68</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-24 05:39:54</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
