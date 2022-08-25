@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="CyberInt Alerts" max_length="40" name="x_847006_cyberint_cyberint_alerts" sizeclass="7" type="collection">
+    <element label="CyberInt Alerts" max_length="40" name="x_847006_cyberint_cyberint_alerts" sizeclass="33" type="collection">
         <element label="Alert ID" max_length="40" name="alert_id" type="string"/>
         <element label="category" max_length="40" name="category" type="string"/>
         <element label="Closing reason" max_length="40" name="closing_reason" type="string"/>
         <element label="Closing time" max_length="40" name="closing_time" read_only="true" type="glide_date_time"/>
         <element label="Closing user" max_length="40" name="closing_user" type="string"/>
-        <element label="Created Date" max_length="40" name="created_date" type="glide_date_time"/>
-        <element label="description" max_length="40" name="description" type="string"/>
+        <element label="Created Date" max_length="40" name="created_date" read_only="true" type="glide_date_time"/>
+        <element label="description" max_length="1000" name="description" type="string"/>
         <element label="environment" max_length="40" name="environment" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="recommendation" max_length="40" name="recommendation" type="string"/>
-        <element choice="3" default="High" label="Severity" mandatory="true" max_length="40" name="severity" type="string">
+        <element label="recommendation" max_length="1000" name="recommendation" type="string"/>
+        <element choice="3" label="Severity" mandatory="true" max_length="40" name="severity" type="string">
             <choice>
                 <element inactive_on_update="false" label="High" value="High"/>
                 <element inactive_on_update="false" label="Low" value="Low"/>
@@ -18,15 +18,16 @@
             </choice>
         </element>
         <element label="source" max_length="40" name="source" type="string"/>
-        <element choice="3" default="Open" label="Status" mandatory="true" max_length="40" name="status" type="string">
+        <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="string">
             <choice>
-                <element inactive_on_update="false" label="Closed" value="Closed"/>
-                <element inactive_on_update="false" label="Open" value="Open"/>
+                <element inactive_on_update="false" label="acknowledged" value="acknowledged"/>
+                <element inactive_on_update="false" label="closed" value="closed"/>
+                <element inactive_on_update="false" label="open" value="open"/>
             </choice>
         </element>
         <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
         <element label="type" max_length="40" name="type" type="string"/>
-        <element label="Updated Date" max_length="40" name="updated_date" type="glide_date_time"/>
+        <element label="Updated Date" max_length="40" name="updated_date" read_only="true" type="glide_date_time"/>
         <index name="index">
             <element name="sys_class_name"/>
         </index>
