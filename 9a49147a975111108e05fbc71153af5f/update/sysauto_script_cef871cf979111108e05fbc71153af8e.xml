@@ -17,24 +17,55 @@
         <run_time>1970-01-01 08:01:00</run_time>
         <run_type>periodically</run_type>
         <script><![CDATA[(function executRule(current, previous) {
-    try {
-        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Default POST');
+
+    function fetchAlerts(page) {
+        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'POST - Fetch alerts from CyberInt');
+
+        // set cookie header with token from credentials table
+        var instance = new GlideRecord('x_847006_cyberint_cyberint_credentials');
+        instance.addQuery('token', '!=', 0);
+        instance.query();
+        instance.next();
+        r.setRequestHeader("Cookie", "access_token=" + instance.token);
+
+        // set body filters with fields from credentials table
+        var statuses = instance.status.toString().split(",");
+        var severities = instance.severity.toString().split(",");
+		var rightnow = new GlideDateTime();
+		
+        var body = {
+            "page": page,
+            "size": 100,
+            "filters": {
+                "status": statuses,
+                "severity": severities,
+                "modification_date": {
+                    "from": instance.last_fetch_time,
+                    "to": rightnow
+                }
+            }
+        };
+
+        r.setRequestBody(JSON.stringify(body));
 
         var response = r.execute();
         var responseBody = response.getBody();
         var httpStatus = response.getStatusCode();
-        gs.info("Response status: " + httpStatus);
+        gs.info("Fetch Response Status: " + httpStatus);
         //         gs.info("Response body: " + responseBody);
-
+		
         var responseObj = JSON.parse(responseBody);
-        gs.info("Total alerts: " + responseObj.total);
+        return [responseObj, instance];
+    }
 
+    function createAlerts(responseObj,instance) {
         for (var i = 0; i < responseObj.alerts.length; i++) {
-	        var cia = new GlideRecord('x_847006_cyberint_cyberint_alerts');
+            var cia = new GlideRecord('x_847006_cyberint_cyberint_alerts');
             cia.addQuery('alert_id', '=', responseObj.alerts[i].ref_id);
             cia.query();
             exist_alert = cia.next();
             gs.info('Alert ' + responseObj.alerts[i].ref_id + ' exist in ServiceNow? ' + exist_alert);
+
             if (!cia.alert_id) {
                 cia.initialize();
                 cia.alert_id = responseObj.alerts[i].ref_id;
@@ -51,10 +82,30 @@
                 cia.update_date = responseObj.alerts[i].modification_date;
                 cia.insert();
                 gs.info('Alert ' + cia.alert_id + ' Created');
+                instance.last_fetch_time = responseObj.alerts[i].modification_date;
+                instance.update();
+                gs.info('Last fetch time -> ' + instance.last_fetch_time);
             }
         }
+		return instance.last_fetch_time;
+    }
 
-
+    try {
+        var j = 1;
+        var total_alerts_to_fetch = 1;
+        while (total_alerts_to_fetch > 0) {
+            var fetchValues = fetchAlerts(j);
+            var responseObject = fetchValues[0];
+            var sn_instance = fetchValues[1];
+			
+            gs.info("Total alerts: " + responseObject.total);
+            total_alerts_to_fetch = responseObject.total;
+            var last_fetch_time = createAlerts(responseObject, sn_instance);
+            total_alerts_to_fetch -= (100*j);
+            j++;
+			gs.info(total_alerts_to_fetch + " more to fetch");
+        }
+		gs.info("Finish create alerts");
     } catch (ex) {
         var message = ex.message;
         gs.info(message);
@@ -65,14 +116,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>96</sys_mod_count>
+        <sys_mod_count>117</sys_mod_count>
         <sys_name>Cyberint_Puller_vr1</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-24 07:20:40</sys_updated_on>
+        <sys_updated_on>2022-08-25 14:10:01</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>

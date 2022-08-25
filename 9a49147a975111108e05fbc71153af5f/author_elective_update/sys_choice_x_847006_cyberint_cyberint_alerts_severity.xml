@@ -31,10 +31,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>b27be47a979111108e05fbc71153afc8</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 13:29:53</sys_updated_on>
-            <value>High</value>
+            <sys_updated_on>2022-08-25 11:12:19</sys_updated_on>
+            <value>high</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -51,10 +51,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>b36789b2971511108e05fbc71153af21</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 13:28:21</sys_updated_on>
-            <value>Low</value>
+            <sys_updated_on>2022-08-25 11:12:14</sys_updated_on>
+            <value>low</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -71,10 +71,30 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>8cab24ba979111108e05fbc71153af0c</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-08-25 11:12:08</sys_updated_on>
+            <value>medium</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>severity</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Very High</label>
+            <language>en</language>
+            <name>x_847006_cyberint_cyberint_alerts</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-08-25 11:11:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c5c4b511972511108e05fbc71153afaa</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-17 13:30:05</sys_updated_on>
-            <value>Medium</value>
+            <sys_updated_on>2022-08-25 11:12:04</sys_updated_on>
+            <value>very_high</value>
         </sys_choice>
     </sys_choice>
 </record_update>

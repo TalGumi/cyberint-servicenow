@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>true</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>true</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_847006_cyberint_cyberint_alerts</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_847006_cyberint_cyberint_alerts">status=^closing_reasonISEMPTY^closing_userISEMPTY^EQ<item display_value="-- None --" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value=""/>
+            <item endquery="false" field="closing_reason" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="false" field="closing_user" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message><![CDATA[<p>Alert closing reason &amp; closing user must be specified</p>]]></message>
+        <name>Mirroring </name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+//     try {
+//         var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Default POST');
+
+//         var response = r.execute();
+//         var responseBody = response.getBody();
+//         var httpStatus = response.getStatusCode();
+
+// 		gs.info("Response status: " + httpStatus);
+//         gs.info("Response body: " + responseBody);
+        
+// 		var responseObj = JSON.parse(responseBody);
+		
+//         current.alert_id = responseObj.alerts.ref_id;
+// 		current.closing_reason = responseObj;
+
+// 		gs.info("Alert ID: " + responseObj.alerts.ref_id);
+//         gs.info("Total alerts: " + responseObj.total);
+// 		current.update();
+
+//     } catch (ex) {
+//         var message = ex.message;
+// 		gs.info(message);
+//     }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-23 08:53:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a0c1836097a111108e05fbc71153af01</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Mirroring </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_script_a0c1836097a111108e05fbc71153af01</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-25 10:40:06</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=a0c1836097a111108e05fbc71153af01"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</application>
+        <file_path/>
+        <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
+        <instance_name>dev120129</instance_name>
+        <name>sys_script_a0c1836097a111108e05fbc71153af01</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;true&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;true&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_847006_cyberint_cyberint_alerts&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="x_847006_cyberint_cyberint_alerts"&gt;status=^closing_reasonISEMPTY^closing_userISEMPTY^EQ&lt;item display_value="-- None --" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;item endquery="false" field="closing_reason" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/&gt;&lt;item endquery="false" field="closing_user" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message&gt;&lt;![CDATA[&lt;p&gt;Alert closing reason &amp;amp; closing user must be specified&lt;/p&gt;]]&gt;&lt;/message&gt;&lt;name&gt;Mirroring &lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+//     try {
+//         var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Default POST');
+
+//         var response = r.execute();
+//         var responseBody = response.getBody();
+//         var httpStatus = response.getStatusCode();
+
+// 		gs.info("Response status: " + httpStatus);
+//         gs.info("Response body: " + responseBody);
+        
+// 		var responseObj = JSON.parse(responseBody);
+		
+//         current.alert_id = responseObj.alerts.ref_id;
+// 		current.closing_reason = responseObj;
+
+// 		gs.info("Alert ID: " + responseObj.alerts.ref_id);
+//         gs.info("Total alerts: " + responseObj.total);
+// 		current.update();
+
+//     } catch (ex) {
+//         var message = ex.message;
+// 		gs.info(message);
+//     }
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-23 08:53:16&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a0c1836097a111108e05fbc71153af01&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_name&gt;Mirroring &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CyberInt_try" source="x_847006_cyberint"&gt;9a49147a975111108e05fbc71153af5f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CyberInt_try"&gt;9a49147a975111108e05fbc71153af5f&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_a0c1836097a111108e05fbc71153af01&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-25 10:40:06&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=a0c1836097a111108e05fbc71153af01"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>608122197</payload_hash>
+        <record_name>Mirroring </record_name>
+        <reverted_from/>
+        <source>4988c1b2971511108e05fbc71153af5f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-25 10:40:07</sys_created_on>
+        <sys_id>c1bda95997e111108e05fbc71153af63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182d49677580000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-25 10:40:07</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>49bda959e8e111101befdbe621c39962</update_guid>
+        <update_guid_history>49bda959e8e111101befdbe621c39962:608122197,42dc6591f4e11110f1ddd1640e928d2b:2106876425,04ca7fb001255110ecacf859e7ae499f:-847287350,a97a7fb01a25511005609885b6e857ec:784198727,940af3b0a92551101ef97b793712349e:168263716,4db9ff708c2551105c7e627140c0a64b:159705092,1429f7701e25511020047068aab42bd8:287763761,0de8777018255110982a667bdfab05b1:-698814766,50072364ce251110fbf097e951f5af83:1680259732,755e1fe88be111104a208b806d82eaff:1988334084,9e8847e4c8a111104dfc71a1c2bdff83:-24862362,0d18cf6416a11110c10c457b4cf0109b:1722540910,83c64764c8a11110e460079afe01c5cd:2130754191,bd6647645fa1111094f4acafa514bad6:-1474802271,93e50be069a111103d2f5f622ac77ab7:-110524944,f6e3c36057a11110242b0c4ae18d94b1:1118241036,dc124b20a6a11110d6e1e16d25d940ec:-2052978853</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-25 10:40:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>3cb082b039114bd09ed95f8087885240</sys_id>
+        <sys_metadata>a0c1836097a111108e05fbc71153af01</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mirroring </sys_name>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_parent display_value="CyberInt Alerts">aba964f6979111108e05fbc71153affb</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
+        <sys_update_name>sys_script_a0c1836097a111108e05fbc71153af01</sys_update_name>
+        <sys_update_version display_value="sys_script_a0c1836097a111108e05fbc71153af01">c1bda95997e111108e05fbc71153af63</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-25 10:40:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

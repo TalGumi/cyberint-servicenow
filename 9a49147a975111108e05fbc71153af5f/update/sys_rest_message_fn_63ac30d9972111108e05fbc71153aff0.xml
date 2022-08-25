@@ -5,29 +5,32 @@
         <basic_auth_profile/>
         <basic_auth_user/>
         <content>{&#13;
-            "page": 1,&#13;
-            "size": 100&#13;
+    "alert_ref_ids": &lt;alert_ref_ids&gt;,&#13;
+    "data": {&#13;
+        "status": &lt;status&gt;,&#13;
+        "closure_reason": &lt;closure_reason&gt;&#13;
+    }&#13;
 }</content>
-        <function_name>POST - Fetch alerts from CyberInt</function_name>
-        <http_method>post</http_method>
+        <function_name>PUT - Update Alerts in CyberInt</function_name>
+        <http_method>put</http_method>
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>Cyberint_Puller [ POST - Fetch alerts from CyberInt ]</qualified_name>
-        <rest_endpoint>https://argos-demo.cyberint.io/alert/api/v1/alerts</rest_endpoint>
+        <qualified_name>Cyberint_Puller [ PUT - Update Alerts in CyberInt ]</qualified_name>
+        <rest_endpoint>https://argos-demo.cyberint.io/alert/api/v1/alerts/status</rest_endpoint>
         <rest_message display_value="Cyberint_Puller">b30eb90497e911108e05fbc71153affc</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-08-21 14:40:45</sys_created_on>
-        <sys_id>476e314497e911108e05fbc71153af11</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>POST - Fetch alerts from CyberInt</sys_name>
+        <sys_created_on>2022-08-25 07:15:30</sys_created_on>
+        <sys_id>63ac30d9972111108e05fbc71153aff0</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>PUT - Update Alerts in CyberInt</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
-        <sys_update_name>sys_rest_message_fn_476e314497e911108e05fbc71153af11</sys_update_name>
+        <sys_update_name>sys_rest_message_fn_63ac30d9972111108e05fbc71153aff0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-25 07:21:00</sys_updated_on>
+        <sys_updated_on>2022-08-25 10:02:58</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>
