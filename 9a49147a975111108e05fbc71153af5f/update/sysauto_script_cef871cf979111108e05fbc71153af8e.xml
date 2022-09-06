@@ -18,6 +18,17 @@
         <run_type>periodically</run_type>
         <script><![CDATA[(function executRule(current, previous) {
 
+    function attachments(alert_id, attachment_id) {
+
+    }
+
+    function analysisReport(alert_id, instance) {
+        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Get analysis report');
+        r.setStringParameter('alert_id', alert_id);
+		r.setStringParameter('api_environment', instance.api_environment);
+
+    }
+
     function fetchAlerts(page) {
         var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'POST - Fetch alerts from CyberInt');
 
@@ -26,39 +37,48 @@
         instance.addQuery('token', '!=', 0);
         instance.query();
         instance.next();
+		r.setStringParameter('api_environment', instance.api_environment);
         r.setRequestHeader("Cookie", "access_token=" + instance.token);
+
+        //         gs.info("Fetch Instance Token: " + instance.token);
+        //         gs.info("Fetch Instance Last Fetch Time: " + instance.last_fetch_time);
 
         // set body filters with fields from credentials table
         var statuses = instance.status.toString().split(",");
         var severities = instance.severity.toString().split(",");
-		var rightnow = new GlideDateTime();
-		
+
+        var rightnow = new GlideDateTime();
+
+        var filters = {
+            "status": statuses,
+            "severity": severities,
+            "modification_date": {
+                "from": String(instance.last_fetch_time),
+                "to": String(rightnow)
+            }
+        };
+
         var body = {
             "page": page,
             "size": 100,
-            "filters": {
-                "status": statuses,
-                "severity": severities,
-                "modification_date": {
-                    "from": instance.last_fetch_time,
-                    "to": rightnow
-                }
-            }
+            "filters": filters
         };
 
         r.setRequestBody(JSON.stringify(body));
 
+        gs.info("Fetch Request Body: " + r.getRequestBody());
         var response = r.execute();
         var responseBody = response.getBody();
         var httpStatus = response.getStatusCode();
+
         gs.info("Fetch Response Status: " + httpStatus);
-        //         gs.info("Response body: " + responseBody);
-		
+        //         gs.info("Fetch Response Body: " + responseBody);
+
         var responseObj = JSON.parse(responseBody);
         return [responseObj, instance];
     }
 
-    function createAlerts(responseObj,instance) {
+    function createAlerts(responseObj, instance) {
         for (var i = 0; i < responseObj.alerts.length; i++) {
             var cia = new GlideRecord('x_847006_cyberint_cyberint_alerts');
             cia.addQuery('alert_id', '=', responseObj.alerts[i].ref_id);
@@ -67,6 +87,13 @@
             gs.info('Alert ' + responseObj.alerts[i].ref_id + ' exist in ServiceNow? ' + exist_alert);
 
             if (!cia.alert_id) {
+                var alert_id = responseObj.alerts[i].ref_id;
+
+                if (responseObj.alerts[i].attachments[0]) {
+                    var attachment_id = responseObj.alerts[i].attachments[0].id;
+                }
+
+
                 cia.initialize();
                 cia.alert_id = responseObj.alerts[i].ref_id;
                 cia.status = responseObj.alerts[i].status;
@@ -85,9 +112,11 @@
                 instance.last_fetch_time = responseObj.alerts[i].modification_date;
                 instance.update();
                 gs.info('Last fetch time -> ' + instance.last_fetch_time);
+                var lft = new GlideDateTime(instance.last_fetch_time);
+                gs.info('Last fetch time Month -> ' + lft.getMonthLocalTime());
             }
         }
-		return instance.last_fetch_time;
+        return instance.last_fetch_time;
     }
 
     try {
@@ -97,15 +126,18 @@
             var fetchValues = fetchAlerts(j);
             var responseObject = fetchValues[0];
             var sn_instance = fetchValues[1];
-			
+
             gs.info("Total alerts: " + responseObject.total);
             total_alerts_to_fetch = responseObject.total;
             var last_fetch_time = createAlerts(responseObject, sn_instance);
-            total_alerts_to_fetch -= (100*j);
+            total_alerts_to_fetch -= (100 * j);
             j++;
-			gs.info(total_alerts_to_fetch + " more to fetch");
+            if (total_alerts_to_fetch > 0) {
+                gs.info(total_alerts_to_fetch + " more to fetch");
+            }
         }
-		gs.info("Finish create alerts");
+        gs.info("Finish create alerts");
+
     } catch (ex) {
         var message = ex.message;
         gs.info(message);
@@ -116,14 +148,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>117</sys_mod_count>
+        <sys_mod_count>145</sys_mod_count>
         <sys_name>Cyberint_Puller_vr1</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-25 14:10:01</sys_updated_on>
+        <sys_updated_on>2022-09-06 12:12:38</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>

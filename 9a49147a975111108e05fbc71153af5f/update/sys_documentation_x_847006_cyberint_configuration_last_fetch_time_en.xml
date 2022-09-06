@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="last_fetch_time" label="Last fetch time" language="en" table="x_847006_cyberint_configuration">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>last_fetch_time</element>
+            <help/>
+            <hint/>
+            <label>Last fetch time</label>
+            <language>en</language>
+            <name>x_847006_cyberint_configuration</name>
+            <plural>Last fetch times</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-09-06 15:26:28</sys_created_on>
+            <sys_id>a852acd9973511108e05fbc71153af63</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Last fetch time</sys_name>
+            <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+            <sys_update_name>sys_documentation_x_847006_cyberint_configuration_last_fetch_time_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-09-06 15:26:28</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -3,7 +3,7 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>true</action_insert>
+        <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
@@ -27,9 +27,62 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-	// Add your code here
+    // Add your code here
+
+    if (current.status != "open") {
+        gs.info("current.status : " + current.status);
+        if (current.status == 'acknowledged' || (current.status == 'closed' && current.closing_reason)) {
+            try {
+                var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'PUT - Update Alerts in CyberInt');
+
+                var instance = new GlideRecord('x_847006_cyberint_cyberint_credentials');
+
+                instance.addQuery('token', '!=', 0);
+                instance.query();
+                instance.next();
+
+                gs.info("PUT instance : " + instance.name);
+				r.setStringParameter('api_environment', instance.api_environment);
+                r.setRequestHeader("Cookie", "access_token=" + instance.token);
+
+
+                var data = {
+                    "status": String(current.status),
+                    "closure_reason": String(current.closing_reason)
+                };
+
+                if (current.status == 'acknowledged') {
+                    data = {
+                        "status": String(current.status)
+                    };
+                }
+
+                var body = {
+                    "alert_ref_ids": [String(current.alert_id)],
+                    "data": data
+                };
+
+                r.setRequestBody(JSON.stringify(body));
+
+                var RequestBody = r.getRequestBody();
+                var RequestHeader = r.getRequestHeader('Cookie');
+                var response = r.execute();
+                gs.info("PUT RequestBody : " + RequestBody);
+
+                var httpStatus = response.getStatusCode();
+                var responseBody = response.getBody();
+                gs.info("PUT Response Status (Close Alert) : " + httpStatus + ", Response Body : " + responseBody);
+            } catch (ex) {
+                var message = ex.message;
+                gs.info(message);
+
+            }
+        } else {
+            gs.info("PUT = Alet not update");
+        }
+    }
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -38,7 +91,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3ced619997e111108e05fbc71153af7c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Mirroring</sys_name>
         <sys_overrides/>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -46,7 +99,7 @@
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_script_3ced619997e111108e05fbc71153af7c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-25 12:05:30</sys_updated_on>
+        <sys_updated_on>2022-09-06 12:09:32</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="Configuration Fields" section_id="7c20310b979111108e05fbc71153af95" sys_domain="global" table="x_847006_cyberint_cyberint_credentials" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
+            <element>api_environment</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-23 07:17:11</sys_created_on>
-            <sys_id>811ce2e8972111108e05fbc71153af2c</sys_id>
+            <sys_created_on>2022-09-06 12:00:08</sys_created_on>
+            <sys_id>d213f70197b111108e05fbc71153afb4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Configuration Fields" display_value="Configuration Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">7c20310b979111108e05fbc71153af95</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-23 07:17:11</sys_updated_on>
+            <sys_updated_on>2022-09-06 12:00:08</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,29 +18,29 @@
             <element>token</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-23 07:17:11</sys_created_on>
-            <sys_id>051ce2e8972111108e05fbc71153af2c</sys_id>
+            <sys_created_on>2022-09-06 12:00:08</sys_created_on>
+            <sys_id>5613f70197b111108e05fbc71153afb4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Configuration Fields" display_value="Configuration Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">7c20310b979111108e05fbc71153af95</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-23 07:17:11</sys_updated_on>
+            <sys_updated_on>2022-09-06 12:00:08</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
+            <element>name</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-23 07:17:11</sys_created_on>
-            <sys_id>851ce2e8972111108e05fbc71153af2c</sys_id>
+            <sys_created_on>2022-09-06 12:00:08</sys_created_on>
+            <sys_id>d613f70197b111108e05fbc71153afb4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Configuration Fields" display_value="Configuration Fields" name="x_847006_cyberint_cyberint_credentials" sys_domain="global" view="Default view">7c20310b979111108e05fbc71153af95</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-08-23 07:17:11</sys_updated_on>
+            <sys_updated_on>2022-09-06 12:00:08</sys_updated_on>
             <sys_user/>
-            <type>.split</type>
+            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Configuration Fields</caption>

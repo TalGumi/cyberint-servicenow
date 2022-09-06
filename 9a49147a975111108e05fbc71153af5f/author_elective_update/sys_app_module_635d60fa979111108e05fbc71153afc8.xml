@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="CyberInt">3d4b5cfa975111108e05fbc71153af55</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>NEW</link_type>
+        <map_page/>
+        <mobile_title>Add new</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_847006_cyberint_cyberint_alerts</name>
+        <order>100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_847006_cyberint.cyberint_alerts_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-17 11:34:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>635d60fa979111108e05fbc71153afc8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Add new</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_app_module_635d60fa979111108e05fbc71153afc8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-17 12:11:46</sys_updated_on>
+        <timeline_page/>
+        <title>Add new</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</application>
+        <file_path/>
+        <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
+        <instance_name>dev120129</instance_name>
+        <name>sys_app_module_635d60fa979111108e05fbc71153afc8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="CyberInt">3d4b5cfa975111108e05fbc71153af55</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>NEW</link_type><map_page/><mobile_title>Add new</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_847006_cyberint_cyberint_alerts</name><order>100</order><override_menu_roles>false</override_menu_roles><query/><report/><roles>x_847006_cyberint.cyberint_alerts_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-17 11:34:44</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>635d60fa979111108e05fbc71153afc8</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Add new</sys_name><sys_overrides/><sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_app_module_635d60fa979111108e05fbc71153afc8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-17 12:11:46</sys_updated_on><timeline_page/><title>Add new</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-1981834806</payload_hash>
+        <record_name>Add new</record_name>
+        <reverted_from/>
+        <source>5e49147a975111108e05fbc71153af61</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-17 12:11:46</sys_created_on>
+        <sys_id>39f5bcb297d111108e05fbc71153afcd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182abb782660000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-17 12:11:46</sys_updated_on>
+        <type>Module</type>
+        <update_guid>3df57cb2fed1111089f00debccddcee0</update_guid>
+        <update_guid_history>3df57cb2fed1111089f00debccddcee0:-1981834806,b5ce243e3e9111100dd9d9e3db9dc634:-1897177717,8f7d2cfaf0911110240f3fe1253bd46f:573733949</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Add new">1f10f34d977111108e05fbc71153af61</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-06 11:47:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>0c93acd890ed4cfd9ec9a6b47320fb31</sys_id>
+        <sys_metadata>635d60fa979111108e05fbc71153afc8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add new</sys_name>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
+        <sys_update_name>sys_app_module_635d60fa979111108e05fbc71153afc8</sys_update_name>
+        <sys_update_version display_value="sys_app_module_635d60fa979111108e05fbc71153afc8">39f5bcb297d111108e05fbc71153afcd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-06 11:47:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
