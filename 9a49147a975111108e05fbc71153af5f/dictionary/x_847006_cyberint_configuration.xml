@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Configuration" max_length="40" name="x_847006_cyberint_configuration" type="collection">
+    <element label="Configuration" max_length="40" name="x_847006_cyberint_configuration" sizeclass="1" type="collection">
         <element label="API Environment" mandatory="true" max_length="40" name="api_environment" type="string"/>
-        <element label="API Token" mandatory="true" max_length="4000" name="api_token" type="password"/>
+        <element label="API Token" mandatory="true" max_length="255" name="api_token" type="password2"/>
         <element label="Category" max_length="4000" name="category" type="glide_list"/>
         <element label="Created date" max_length="40" name="created_date" type="glide_date_time"/>
         <element label="Enrich alert" max_length="40" name="enrich_alert" type="boolean"/>

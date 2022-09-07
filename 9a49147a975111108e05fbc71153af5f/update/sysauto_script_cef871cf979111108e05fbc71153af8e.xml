@@ -25,7 +25,7 @@
     function analysisReport(alert_id, instance) {
         var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Get analysis report');
         r.setStringParameter('alert_id', alert_id);
-		r.setStringParameter('api_environment', instance.api_environment);
+        r.setStringParameter('api_environment', instance.api_environment);
 
     }
 
@@ -33,24 +33,21 @@
         var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'POST - Fetch alerts from CyberInt');
 
         // set cookie header with token from credentials table
-        var instance = new GlideRecord('x_847006_cyberint_cyberint_credentials');
-        instance.addQuery('token', '!=', 0);
+        var instance = new GlideRecord('x_847006_cyberint_configuration');
+        instance.addQuery('api_token', '!=', 0);
         instance.query();
         instance.next();
-		r.setStringParameter('api_environment', instance.api_environment);
-        r.setRequestHeader("Cookie", "access_token=" + instance.token);
+        var decrypted = instance.api_token.getDecryptedValue();
 
-        //         gs.info("Fetch Instance Token: " + instance.token);
-        //         gs.info("Fetch Instance Last Fetch Time: " + instance.last_fetch_time);
+        r.setStringParameter('api_environment', instance.api_environment);
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
 
         // set body filters with fields from credentials table
-        var statuses = instance.status.toString().split(",");
         var severities = instance.severity.toString().split(",");
 
         var rightnow = new GlideDateTime();
 
         var filters = {
-            "status": statuses,
             "severity": severities,
             "modification_date": {
                 "from": String(instance.last_fetch_time),
@@ -71,9 +68,8 @@
         var responseBody = response.getBody();
         var httpStatus = response.getStatusCode();
 
-        gs.info("Fetch Response Status: " + httpStatus);
+        gs.info(instance.instance_name + " - Fetch Response Status: " + httpStatus);
         //         gs.info("Fetch Response Body: " + responseBody);
-
         var responseObj = JSON.parse(responseBody);
         return [responseObj, instance];
     }
@@ -84,7 +80,7 @@
             cia.addQuery('alert_id', '=', responseObj.alerts[i].ref_id);
             cia.query();
             exist_alert = cia.next();
-            gs.info('Alert ' + responseObj.alerts[i].ref_id + ' exist in ServiceNow? ' + exist_alert);
+            gs.info(instance.instance_name + ' - Alert ' + responseObj.alerts[i].ref_id + ' exist in ServiceNow? ' + exist_alert);
 
             if (!cia.alert_id) {
                 var alert_id = responseObj.alerts[i].ref_id;
@@ -92,8 +88,7 @@
                 if (responseObj.alerts[i].attachments[0]) {
                     var attachment_id = responseObj.alerts[i].attachments[0].id;
                 }
-
-
+                // Create new alerts in ServiceNow
                 cia.initialize();
                 cia.alert_id = responseObj.alerts[i].ref_id;
                 cia.status = responseObj.alerts[i].status;
@@ -108,13 +103,31 @@
                 cia.created_date = responseObj.alerts[i].created_date;
                 cia.update_date = responseObj.alerts[i].modification_date;
                 cia.insert();
-                gs.info('Alert ' + cia.alert_id + ' Created');
+                gs.info(instance.instance_name + ' - Alert ' + cia.alert_id + ' Created');
+            } else {
+                // Update exist alerts in ServiceNow
+                cia.alert_id = responseObj.alerts[i].ref_id;
+                cia.status = responseObj.alerts[i].status;
+                cia.description = responseObj.alerts[i].description;
+                cia.recommendation = responseObj.alerts[i].recommendation;
+                cia.source = responseObj.alerts[i].source;
+                cia.type = responseObj.alerts[i].type;
+                cia.category = responseObj.alerts[i].category;
+                cia.created_date = responseObj.alerts[i].created_date;
+                cia.severity = responseObj.alerts[i].severity;
+                cia.environment = responseObj.alerts[i].environment;
+                cia.created_date = responseObj.alerts[i].created_date;
+                cia.update_date = responseObj.alerts[i].modification_date;
+                cia.update();
+                gs.info(instance.instance_name + ' - Alert ' + cia.alert_id + ' Updated');
+
+            }
+            if (!instance.last_fetch_time || instance.last_fetch_time < responseObj.alerts[i].modification_date) {
                 instance.last_fetch_time = responseObj.alerts[i].modification_date;
                 instance.update();
-                gs.info('Last fetch time -> ' + instance.last_fetch_time);
-                var lft = new GlideDateTime(instance.last_fetch_time);
-                gs.info('Last fetch time Month -> ' + lft.getMonthLocalTime());
             }
+
+            gs.info(instance.instance_name + ' - Last fetch time -> ' + instance.last_fetch_time);
         }
         return instance.last_fetch_time;
     }
@@ -127,16 +140,16 @@
             var responseObject = fetchValues[0];
             var sn_instance = fetchValues[1];
 
-            gs.info("Total alerts: " + responseObject.total);
+            gs.info(sn_instance.instance_name + " - Total alerts: " + responseObject.total);
             total_alerts_to_fetch = responseObject.total;
             var last_fetch_time = createAlerts(responseObject, sn_instance);
             total_alerts_to_fetch -= (100 * j);
             j++;
             if (total_alerts_to_fetch > 0) {
-                gs.info(total_alerts_to_fetch + " more to fetch");
+                gs.info(sn_instance.instance_name + " : " + total_alerts_to_fetch + " more to fetch");
             }
         }
-        gs.info("Finish create alerts");
+        gs.info(sn_instance.instance_name + " - Finish create alerts");
 
     } catch (ex) {
         var message = ex.message;
@@ -148,14 +161,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>145</sys_mod_count>
+        <sys_mod_count>155</sys_mod_count>
         <sys_name>Cyberint_Puller_vr1</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-06 12:12:38</sys_updated_on>
+        <sys_updated_on>2022-09-07 09:55:18</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
