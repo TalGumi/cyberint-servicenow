@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="CyberInt Alerts" max_length="40" name="x_847006_cyberint_cyberint_alerts" sizeclass="1439" type="collection">
         <element label="Alert ID" mandatory="true" max_length="40" name="alert_id" read_only="true" type="string"/>
-        <element label="Attachment" max_length="4000" name="attachment" type="url"/>
-        <element label="category" max_length="40" name="category" type="string"/>
+        <element label="Attachment" max_length="4000" name="attachment" read_only="true" type="url"/>
+        <element label="category" max_length="40" name="category" read_only="true" type="string"/>
         <element choice="1" label="Closing reason" max_length="40" name="closing_reason" type="string">
             <choice>
                 <element inactive_on_update="false" label="false positive" value="false_positive"/>
@@ -13,11 +13,11 @@
         <element label="Closing time" max_length="40" name="closing_time" read_only="true" type="glide_date_time"/>
         <element label="Closing user" max_length="40" name="closing_user" read_only="true" type="string"/>
         <element label="Created Date" max_length="40" name="created_date" read_only="true" type="glide_date_time"/>
-        <element label="description" max_length="1000" name="description" type="string"/>
-        <element label="environment" max_length="40" name="environment" type="string"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="recommendation" max_length="1000" name="recommendation" type="string"/>
-        <element choice="3" label="Severity" mandatory="true" max_length="40" name="severity" type="string">
+        <element label="description" max_length="1000" name="description" read_only="true" type="string"/>
+        <element label="environment" max_length="40" name="environment" read_only="true" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="recommendation" max_length="1000" name="recommendation" read_only="true" type="string"/>
+        <element choice="3" label="Severity" mandatory="true" max_length="40" name="severity" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="High" value="high"/>
                 <element inactive_on_update="false" label="Low" value="low"/>
@@ -25,7 +25,7 @@
                 <element inactive_on_update="false" label="Very High" value="very_high"/>
             </choice>
         </element>
-        <element label="source" max_length="40" name="source" type="string"/>
+        <element label="source" max_length="40" name="source" read_only="true" type="string"/>
         <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="string">
             <choice>
                 <element inactive_on_update="false" label="acknowledged" value="acknowledged"/>
@@ -34,7 +34,7 @@
             </choice>
         </element>
         <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
-        <element label="type" max_length="40" name="type" type="string"/>
+        <element label="type" max_length="40" name="type" read_only="true" type="string"/>
         <element label="Updated Date" max_length="40" name="updated_date" read_only="true" type="glide_date_time"/>
         <index name="index">
             <element name="sys_class_name"/>
