@@ -18,15 +18,35 @@
         <run_type>periodically</run_type>
         <script><![CDATA[(function executRule(current, previous) {
 
-    function attachments(alert_id, attachment_id) {
+    function attachments(alert_id, alert_sys_id, attachment_id, instance) {
+        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Get analysis report');
+        var decrypted = instance.api_token.getDecryptedValue();
 
+        r.setStringParameter('alert_id', alert_id);
+        r.setStringParameter('attachment_id', attachment_id);
+        r.setStringParameter('api_environment', instance.api_environment);
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
+        var alert_file_name = alert_id + "_attachment";
+        r.saveResponseBodyAsAttachment('x_847006_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
+
+        var response = r.execute();
+        var httpResponseStatus = response.getStatusCode();
+        gs.info(instance.instance_name + " - Add Attachment for alert " + alert_id + " : Status Code " + httpResponseStatus);
     }
 
-    function analysisReport(alert_id, instance) {
+    function analysisReport(alert_id, alert_sys_id, file_name, instance) {
         var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Get analysis report');
+        var decrypted = instance.api_token.getDecryptedValue();
+
         r.setStringParameter('alert_id', alert_id);
         r.setStringParameter('api_environment', instance.api_environment);
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
+        var alert_file_name = alert_id + file_name;
+        r.saveResponseBodyAsAttachment('x_847006_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
 
+        var response = r.execute();
+        var httpResponseStatus = response.getStatusCode();
+        gs.info(instance.instance_name + " - Analysis Report for alert " + alert_id + " : Status Code " + httpResponseStatus);
     }
 
     function fetchAlerts(page) {
@@ -81,12 +101,16 @@
             cia.query();
             exist_alert = cia.next();
             gs.info(instance.instance_name + ' - Alert ' + responseObj.alerts[i].ref_id + ' exist in ServiceNow? ' + exist_alert);
-
+            var alert_sys_id = cia.getUniqueValue();
+            var alert_id = responseObj.alerts[i].ref_id;
             if (!cia.alert_id) {
-                var alert_id = responseObj.alerts[i].ref_id;
-
-                if (responseObj.alerts[i].attachments[0]) {
-                    var attachment_id = responseObj.alerts[i].attachments[0].id;
+                if (instance.enrich_alert) {
+                    if (responseObj.alerts[i].attachments[0]) {
+                        var attachment_id = responseObj.alerts[i].attachments[0].id;
+                        var file_name = responseObj.alerts[i].attachments[0].name;
+						analysisReport(alert_id, alert_sys_id, file_name, instance);
+						attachments(alert_id, alert_sys_id, attachment_id, instance);
+                    }
                 }
                 // Create new alerts in ServiceNow
                 cia.initialize();
@@ -161,14 +185,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>155</sys_mod_count>
+        <sys_mod_count>156</sys_mod_count>
         <sys_name>Cyberint_Puller_vr1</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:55:18</sys_updated_on>
+        <sys_updated_on>2022-09-11 11:41:54</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
