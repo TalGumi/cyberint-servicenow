@@ -6,7 +6,7 @@
         <element label="Created date" max_length="40" name="created_date" type="glide_date_time"/>
         <element label="Enrich alert" max_length="40" name="enrich_alert" type="boolean"/>
         <element label="Environment" max_length="4000" name="environment" type="glide_list"/>
-        <element label="Instance Name" max_length="40" name="instance_name" type="string"/>
+        <element label="Instance Name" mandatory="true" max_length="40" name="instance_name" type="string"/>
         <element label="Last fetch time" max_length="40" name="last_fetch_time" type="glide_date_time"/>
         <element choice="1" label="Severity" max_length="4000" name="severity" type="glide_list">
             <choice>

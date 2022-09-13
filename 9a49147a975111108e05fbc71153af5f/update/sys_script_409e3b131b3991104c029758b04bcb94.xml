@@ -18,9 +18,9 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Validate last fetch time range &amp; name</name>
+        <name>Test Module</name>
         <order>100</order>
-        <priority>100</priority>
+        <priority>200</priority>
         <rest_method/>
         <rest_method_text/>
         <rest_service/>
@@ -30,50 +30,45 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
     // Add your code here
-    var right_now = new GlideDateTime();
-    var last_fetch_time = new GlideDateTime(current.last_fetch_time);
+    if (current.api_environment && current.api_token) {
+        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'POST - Fetch alerts from CyberInt');
+        var decrypted = current.api_token.getDecryptedValue();
+		
+        r.setStringParameter('api_environment', current.api_environment);
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
+        var body = {
+            "page": 1,
+            "size": 100
+        };
+        r.setRequestBody(JSON.stringify(body));
+        var response = r.executeAsync();
+        var httpStatus = response.getStatusCode();
 
-    var dif = new GlideDateTime.subtract(last_fetch_time, right_now).getDayPart();
-
-    if (dif / 30 > 6) {
-        current.last_fetch_time = previous.last_fetch_time;
-        current.setAbortAction(true);
-        gs.addErrorMessage("Last fetch time field must be in 6 months range");
-    }
-
-    if (current.instance_name) {
-        var instance = new GlideRecord('x_847006_cyberint_configuration');
-        instance.addQuery('instance_name', '=', current.instance_name);
-        instance.query();
-        var instance_exist = instance.next();
-        if (instance_exist) {
-            current.instance_name = '';
+        if (httpStatus != 200) {
             current.setAbortAction(true);
-            gs.addErrorMessage("Instance name already exist, please choose another name");
+            gs.addErrorMessage("Authorization Error: make sure API Token & Environment are correctly set");
+            current.api_token = '';
+            current.api_environment = '';
         }
     }
-
-
-
-
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-09-01 08:17:02</sys_created_on>
+        <sys_created_on>2022-09-13 12:37:45</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>4a5f8d6f972111108e05fbc71153af94</sys_id>
-        <sys_mod_count>56</sys_mod_count>
-        <sys_name>Validate last fetch time range &amp; name</sys_name>
+        <sys_id>409e3b131b3991104c029758b04bcb94</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Test Module</sys_name>
         <sys_overrides/>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
-        <sys_update_name>sys_script_4a5f8d6f972111108e05fbc71153af94</sys_update_name>
+        <sys_update_name>sys_script_409e3b131b3991104c029758b04bcb94</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-13 12:52:03</sys_updated_on>
+        <sys_updated_on>2022-09-13 12:52:08</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=4a5f8d6f972111108e05fbc71153af94"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=409e3b131b3991104c029758b04bcb94"/>
 </record_update>
