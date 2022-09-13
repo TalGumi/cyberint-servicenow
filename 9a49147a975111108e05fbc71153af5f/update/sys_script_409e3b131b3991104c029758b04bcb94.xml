@@ -28,12 +28,12 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
-
+	
     // Add your code here
     if (current.api_environment && current.api_token) {
         var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'POST - Fetch alerts from CyberInt');
         var decrypted = current.api_token.getDecryptedValue();
-		
+
         r.setStringParameter('api_environment', current.api_environment);
         r.setRequestHeader("Cookie", "access_token=" + decrypted);
         var body = {
@@ -58,7 +58,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>409e3b131b3991104c029758b04bcb94</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Test Module</sys_name>
         <sys_overrides/>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -66,7 +66,7 @@
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_script_409e3b131b3991104c029758b04bcb94</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-13 12:52:08</sys_updated_on>
+        <sys_updated_on>2022-09-13 14:46:04</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
