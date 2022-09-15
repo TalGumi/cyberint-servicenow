@@ -53,9 +53,6 @@
         }
     }
 
-
-
-
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -63,7 +60,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4a5f8d6f972111108e05fbc71153af94</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>Validate last fetch time range &amp; name</sys_name>
         <sys_overrides/>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -71,7 +68,7 @@
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_script_4a5f8d6f972111108e05fbc71153af94</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-13 12:52:03</sys_updated_on>
+        <sys_updated_on>2022-09-15 07:43:24</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

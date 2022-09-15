@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_847006_cyberint.REST_API_CALL</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>REST_API_CALL</name>
+        <script><![CDATA[var REST_API_CALL = Class.create();
+
+REST_API_CALL.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getData: function() {
+        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'POST - Fetch alerts from CyberInt');
+        var api_environment = this.getParameter('api_environment');
+        var api_token = this.getParameter('api_token');
+        var instance_name = this.getParameter('instance_name');
+		
+        // For existing records
+        if (instance_name) {
+            var instance = new GlideRecord('x_847006_cyberint_configuration');
+            instance.addQuery('instance_name', '=', instance_name);
+            instance.query();
+            var instance_exist = instance.next();
+            if (instance_exist) {
+                api_token = instance.api_token.getDecryptedValue();
+            }
+        }
+        r.setStringParameter('api_environment', api_environment);
+        r.setRequestHeader("Cookie", "access_token=" + api_token);
+
+        var response = r.execute();
+        var httpStatus = response.getStatusCode();
+        var responseBody = response.getBody();
+        this.getRootElement().setAttribute('httpStatus', httpStatus);
+        this.getRootElement().setAttribute('responseBody', responseBody);
+    },
+    type: 'REST_API_CALL'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-15 08:33:24</sys_created_on>
+        <sys_id>01695d08974211108e05fbc71153af1e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>REST_API_CALL</sys_name>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_script_include_01695d08974211108e05fbc71153af1e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-15 10:31:15</sys_updated_on>
+    </sys_script_include>
+</record_update>
