@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_847006_cyberint.configuration_admin</name>
+        <requires_subscription>1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>configuration_admin</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-15 10:43:12</sys_created_on>
+        <sys_id>b997390497c211108e05fbc71153aff5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_847006_cyberint.configuration_admin</sys_name>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_user_role_b997390497c211108e05fbc71153aff5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-15 10:43:12</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
+        <file_path/>
+        <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
+        <instance_name>dev120129</instance_name>
+        <name>sys_user_role_b997390497c211108e05fbc71153aff5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_847006_cyberint.configuration_admin</name><requires_subscription>1</requires_subscription><scoped_admin>false</scoped_admin><suffix>configuration_admin</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-09-15 10:43:12</sys_created_on><sys_id>b997390497c211108e05fbc71153aff5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_847006_cyberint.configuration_admin</sys_name><sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_user_role_b997390497c211108e05fbc71153aff5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-09-15 10:43:12</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>105139815</payload_hash>
+        <record_name>x_847006_cyberint.configuration_admin</record_name>
+        <reverted_from/>
+        <source>efcecaeb972511108e05fbc71153afd6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-15 10:43:12</sys_created_on>
+        <sys_id>cbc7bd4497c211108e05fbc71153af55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18340bed6d80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-15 10:43:12</sys_updated_on>
+        <type>Role</type>
+        <update_guid>07c7bd444dc21110c2bc3a46e3f41f55</update_guid>
+        <update_guid_history>07c7bd444dc21110c2bc3a46e3f41f55:105139815</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_847006_cyberint.configuration_admin">feeff545978611108e05fbc71153af5b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-18 13:52:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>00be3e92eb1544eca3d09a44fe1f4964</sys_id>
+        <sys_metadata>b997390497c211108e05fbc71153aff5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_847006_cyberint.configuration_admin</sys_name>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
+        <sys_update_name>sys_user_role_b997390497c211108e05fbc71153aff5</sys_update_name>
+        <sys_update_version display_value="sys_user_role_b997390497c211108e05fbc71153aff5">cbc7bd4497c211108e05fbc71153af55</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-18 13:52:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
