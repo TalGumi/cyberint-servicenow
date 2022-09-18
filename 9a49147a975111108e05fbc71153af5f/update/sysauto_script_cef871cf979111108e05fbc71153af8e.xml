@@ -19,19 +19,19 @@
         <script><![CDATA[(function executRule(current, previous) {
 
     function attachments(alert_id, alert_sys_id, attachment_id, file_name, instance) {
-        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Get analysis report');
+        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_Puller', 'Get alert attachments');
         var decrypted = instance.api_token.getDecryptedValue();
 
         r.setStringParameter('alert_id', alert_id);
         r.setStringParameter('attachment_id', attachment_id);
         r.setStringParameter('api_environment', instance.api_environment);
         r.setRequestHeader("Cookie", "access_token=" + decrypted);
-        var alert_file_name = alert_id + "_attachment_" + file_name + ".pdf";
+        var alert_file_name = alert_id + "_attachment_" + file_name;
         r.saveResponseBodyAsAttachment('x_847006_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
 
         var response = r.execute();
         var httpResponseStatus = response.getStatusCode();
-        gs.info(instance.instance_name + " - Add Attachment for alert " + alert_id + " : Status Code " + httpResponseStatus);
+        gs.debug(instance.instance_name + " - Add Attachment for alert " + alert_id + " : Status Code " + httpResponseStatus);
     }
 
     function analysisReport(alert_id, alert_sys_id, file_name, instance) {
@@ -41,12 +41,12 @@
         r.setStringParameter('alert_id', alert_id);
         r.setStringParameter('api_environment', instance.api_environment);
         r.setRequestHeader("Cookie", "access_token=" + decrypted);
-        var alert_file_name = alert_id + "_analysisReport_" + file_name + ".pdf";
+        var alert_file_name = alert_id + "_analysisReport_" + file_name;
         r.saveResponseBodyAsAttachment('x_847006_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
 
         var response = r.execute();
         var httpResponseStatus = response.getStatusCode();
-        gs.info(instance.instance_name + " - Analysis Report for alert " + alert_id + " : Status Code " + httpResponseStatus);
+        gs.debug(instance.instance_name + " - Add Analysis Report for alert " + alert_id + " : Status Code " + httpResponseStatus);
     }
 
     function fetchAlerts(page) {
@@ -88,7 +88,7 @@
         var responseBody = response.getBody();
         var httpStatus = response.getStatusCode();
 
-        gs.info(instance.instance_name + " - Fetch Response Status: " + httpStatus);
+        gs.debug(instance.instance_name + " - Fetch Response Status: " + httpStatus);
         //         gs.info("Fetch Response Body: " + responseBody);
         var responseObj = JSON.parse(responseBody);
         return [responseObj, instance];
@@ -101,85 +101,106 @@
             cia.query();
             exist_alert = cia.next();
             gs.info(instance.instance_name + ' - Alert ' + responseObj.alerts[i].ref_id + ' exist in ServiceNow? ' + exist_alert);
-            if (!cia.alert_id) {
+            if (!exist_alert) {
                 // Create new alerts in ServiceNow
                 cia.initialize();
-                cia.alert_id = responseObj.alerts[i].ref_id;
-                cia.status = responseObj.alerts[i].status;
-                cia.description = responseObj.alerts[i].description;
-                cia.recommendation = responseObj.alerts[i].recommendation;
-                cia.source = responseObj.alerts[i].source;
-                cia.type = responseObj.alerts[i].type;
-                cia.category = responseObj.alerts[i].category;
-                cia.created_date = responseObj.alerts[i].created_date;
-                cia.severity = responseObj.alerts[i].severity;
-                cia.environment = responseObj.alerts[i].environment;
-                cia.created_date = responseObj.alerts[i].created_date;
-                cia.update_date = responseObj.alerts[i].modification_date;
+            }
+            cia.alert_id = responseObj.alerts[i].ref_id;
+            cia.status = responseObj.alerts[i].status;
+            cia.description = responseObj.alerts[i].description;
+            cia.recommendation = responseObj.alerts[i].recommendation;
+            cia.source = responseObj.alerts[i].source;
+            cia.type = responseObj.alerts[i].type;
+            cia.category = responseObj.alerts[i].category;
+            cia.created_date = responseObj.alerts[i].created_date;
+            cia.severity = responseObj.alerts[i].severity;
+            cia.environment = responseObj.alerts[i].environment;
+            cia.created_date = responseObj.alerts[i].created_date;
+            cia.update_date = responseObj.alerts[i].modification_date;
+            cia.acknowledged_by = responseObj.alerts[i].acknowledged_by;
+            if (responseObj.alerts[i].acknowledged_by) {
+                cia.acknowledged_by = responseObj.alerts[i].acknowledged_by.email;
+            }
+            cia.acknowledged_date = responseObj.alerts[i].acknowledged_date;
+            cia.confidence = responseObj.alerts[i].confidence;
+            cia.impacts = responseObj.alerts[i].impacts.toString();
+            cia.iocs = responseObj.alerts[i].iocs.toString();
+            cia.publish_date = responseObj.alerts[i].publish_date;
+            cia.source_category = responseObj.alerts[i].source_category;
+            cia.related_entities = responseObj.alerts[i].related_entities.toString();
+            cia.tags = responseObj.alerts[i].tags.toString();
+            cia.targeted_brands = responseObj.alerts[i].targeted_brands.toString();
+            cia.targeted_vectors = responseObj.alerts[i].targeted_vectors.toString();
+            cia.threat_actor = responseObj.alerts[i].threat_actor;
+            if (!exist_alert) {
+                // Create new alerts in ServiceNow
                 cia.insert();
                 gs.info(instance.instance_name + ' - Alert ' + cia.alert_id + ' Created');
                 // Enrich Alerts
                 var alert_id = responseObj.alerts[i].ref_id;
                 var alert_sys_id = cia.getUniqueValue();
                 if (instance.enrich_alert) {
-                    gs.info(instance.instance_name + " Enrich Alert : TRUE");
+                    gs.debug(instance.instance_name + " Enrich Alert : TRUE");
                     if (responseObj.alerts[i].attachments[0]) {
                         for (var j = 0; j < responseObj.alerts[i].attachments.length; j++) {
                             var attachment_id = responseObj.alerts[i].attachments[j].id;
-                            var file_name = responseObj.alerts[i].attachments[j].name;
-							gs.info(instance.instance_name + " - Enrich Alert: " + alert_id + " | Attachment ID: " + attachment_id);
-                            attachments(alert_id, alert_sys_id, attachment_id, file_name, instance);
+                            var attachments_file_name = responseObj.alerts[i].attachments[j].name;
+                            attachments(alert_id, alert_sys_id, attachment_id, attachments_file_name, instance);
                         }
-                        analysisReport(alert_id, alert_sys_id, file_name, instance);
+                    }
+                    cia.attachments = "True";
+
+                    if (responseObj.alerts[i].analysis_report) {
+                        var analysis_report_file_name = responseObj.alerts[i].analysis_report.name;
+                        analysisReport(alert_id, alert_sys_id, analysis_report_file_name, instance);
                     }
                 }
             } else {
                 // Update exist alerts in ServiceNow
-                cia.alert_id = responseObj.alerts[i].ref_id;
-                cia.status = responseObj.alerts[i].status;
-                cia.description = responseObj.alerts[i].description;
-                cia.recommendation = responseObj.alerts[i].recommendation;
-                cia.source = responseObj.alerts[i].source;
-                cia.type = responseObj.alerts[i].type;
-                cia.category = responseObj.alerts[i].category;
-                cia.created_date = responseObj.alerts[i].created_date;
-                cia.severity = responseObj.alerts[i].severity;
-                cia.environment = responseObj.alerts[i].environment;
-                cia.created_date = responseObj.alerts[i].created_date;
-                cia.update_date = responseObj.alerts[i].modification_date;
                 cia.update();
                 gs.info(instance.instance_name + ' - Alert ' + cia.alert_id + ' Updated');
             }
-			var instance_last_fetch_time = instance.last_fetch_time;
-            if (instance.last_fetch_time < responseObj.alerts[i].modification_date) {
+            var instance_last_fetch_time = instance.last_fetch_time;
+            if (instance_last_fetch_time < responseObj.alerts[i].modification_date) {
                 instance_last_fetch_time = responseObj.alerts[i].modification_date;
             }
-
-            gs.info(instance.instance_name + ' - Last fetch time -> ' + instance.last_fetch_time);
+            gs.debug(instance.instance_name + ' - Last fetch time: ' + instance.last_fetch_time);
         }
         return instance_last_fetch_time;
     }
 
     try {
-        var x = 1;
-        var total_alerts_to_fetch = 1;
-        while (total_alerts_to_fetch > 0) {
-            var fetchValues = fetchAlerts(x);
-            var responseObject = fetchValues[0];
-            var sn_instance = fetchValues[1];
+        var instance = new GlideRecord('x_847006_cyberint_configuration');
+        instance.addQuery('api_token', '!=', 0);
+        instance.query();
+        instance.next();
+		// Check if instance is active 
+        if (instance.status == 'Enable') {
+			gs.info(instance.instance_name + " - Instance Status is " + instance.status + " ; Start Pulling ");
+            var x = 1;
+            var total_alerts_to_fetch = 1;
+            while (total_alerts_to_fetch > 0) {
+                var fetchValues = fetchAlerts(x);
+                var responseObject = fetchValues[0];
+                var sn_instance = fetchValues[1];
 
-            gs.info(sn_instance.instance_name + " - Total alerts: " + responseObject.total);
-            total_alerts_to_fetch = responseObject.total;
-            var last_fetch_time = createAlerts(responseObject, sn_instance);
-            total_alerts_to_fetch -= (100 * x);
-            x++;
-            if (total_alerts_to_fetch > 0) {
-                gs.info(sn_instance.instance_name + " : " + total_alerts_to_fetch + " more to fetch");
+                gs.info(sn_instance.instance_name + " - Total alerts: " + responseObject.total);
+                total_alerts_to_fetch = responseObject.total;
+                var last_fetch_time = createAlerts(responseObject, sn_instance);
+                total_alerts_to_fetch -= (100 * x);
+                x++;
+                if (total_alerts_to_fetch > 0) {
+                    gs.info(sn_instance.instance_name + " : " + total_alerts_to_fetch + " more to fetch");
+                }
             }
+            gs.info(sn_instance.instance_name + " - Finish fetch alerts");
+            sn_instance.last_fetch_time = last_fetch_time;
+            gs.debug(sn_instance.instance_name + " - last_fetch_time : " + sn_instance.last_fetch_time);
+            sn_instance.update();
         }
-        gs.info(sn_instance.instance_name + " - Finish create alerts");
-		sn_instance.last_fetch_time = last_fetch_time;
-		sn_instance.update();
+		else{
+			gs.info(instance.instance_name + " - Instance Status is " + instance.status);
+		}
     } catch (ex) {
         var message = ex.message;
         gs.info(message);
@@ -190,14 +211,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>171</sys_mod_count>
+        <sys_mod_count>195</sys_mod_count>
         <sys_name>Cyberint_Puller_vr1</sys_name>
         <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-15 10:37:40</sys_updated_on>
+        <sys_updated_on>2022-09-18 11:15:38</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>

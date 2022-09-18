@@ -27,26 +27,6 @@
             <sequence/>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-09-06 15:32:40</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>79b3ec1d973511108e05fbc71153afca</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-09-06 15:57:54</sys_updated_on>
-            <value/>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>type</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>automated_attack_tools</label>
-            <language>en</language>
-            <name>x_847006_cyberint_configuration</name>
-            <sequence/>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
             <sys_created_on>2022-09-06 15:37:27</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
@@ -67,13 +47,13 @@
             <sequence/>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-09-06 15:37:32</sys_created_on>
+            <sys_created_on>2022-09-06 15:43:23</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>edd4249d973511108e05fbc71153af2c</sys_id>
+            <sys_id>ab26a8dd973511108e05fbc71153af49</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-09-06 15:52:56</sys_updated_on>
+            <sys_updated_on>2022-09-18 10:59:43</sys_updated_on>
             <value/>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -81,19 +61,19 @@
             <element>type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>certificate_authority_issues</label>
+            <label>automated_attack_tools</label>
             <language>en</language>
             <name>x_847006_cyberint_configuration</name>
             <sequence/>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-09-06 15:43:23</sys_created_on>
+            <sys_created_on>2022-09-06 15:37:32</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>ab26a8dd973511108e05fbc71153af49</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_id>edd4249d973511108e05fbc71153af2c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-09-06 15:43:23</sys_updated_on>
+            <sys_updated_on>2022-09-06 15:52:56</sys_updated_on>
             <value/>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -814,6 +794,26 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-09-06 15:42:56</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>automated_attack_tools</label>
+            <language>en</language>
+            <name>x_847006_cyberint_configuration</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-09-06 15:32:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>79b3ec1d973511108e05fbc71153afca</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-09-18 10:59:43</sys_updated_on>
             <value/>
         </sys_choice>
     </sys_choice>
