@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="Cyberint">3d4b5cfa975111108e05fbc71153af55</application>
+        <application display_value="Cyberint ServiceNow Security App">3d4b5cfa975111108e05fbc71153af55</application>
         <assessment/>
         <device_type/>
         <filter table="x_847006_cyberint_cyberint_alerts">alert_idISNOTEMPTY^EQ<item endquery="false" field="alert_id" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
@@ -19,14 +19,14 @@
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_847006_cyberint.alert_admin,x_847006_cyberint.alerts_user</roles>
+        <roles>x_847006_cyberint.admin,x_847006_cyberint.user</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-17 11:21:06</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>244a607a979111108e05fbc71153af62</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Security Incident Response</sys_name>
         <sys_overrides/>
         <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_app_module_244a607a979111108e05fbc71153af62</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-18 13:51:02</sys_updated_on>
+        <sys_updated_on>2022-09-18 13:54:55</sys_updated_on>
         <timeline_page/>
         <title>Security Incident Response</title>
         <uncancelable>false</uncancelable>

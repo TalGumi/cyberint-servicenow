@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>cms</category>
+        <client_script><![CDATA[function validateComments() {
+//Gets called if the 'OK' dialog button is clicked
+//Make sure dialog comments are not empty
+var comments = gel("dial_comments").value;
+comments = trim(comments);
+if (comments == "") {
+//If comments are empty stop submission
+alert("Please provide comments to submit the dialog.");
+return false;
+}
+//If comments are not empty do this...
+GlideDialogWindow.get().destroy(); //Close the dialog window
+g_form.setValue("comments", comments); //Set the 'Comments' field with comments in the dialog
+}]]></client_script>
+        <description/>
+        <direct>true</direct>
+        <endpoint>x_847006_cyberint_my_ui_page.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<!-- Get values from dialog preferences passed in -->
+
+
+<!-- Set up form fields and labels -->
+<table width="100%">
+<tbody>
+<tr id="description_row" valign="top">
+<td colspan="2"><!-- Short description value used as a label -->
+${jvar_short_text}</td>
+</tr>
+<tr>
+<td><!-- Comments text field (Contains comments from originating record as a default) --></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+</tr>
+<tr id="dialog_buttons">
+<td colspan="2" align="right"><!-- Pull in 'dialog_buttons_ok_cancel' UI Macro for submit/cancel buttons. 'ok' option will call the 'validateComments' Client script function from the UI Page--></td>
+</tr>
+</tbody>
+</table>
+</j:jelly>]]></html>
+        <name>my_ui_page</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-18 14:58:17</sys_created_on>
+        <sys_id>858c4e4197c611108e05fbc71153afbf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>my_ui_page</sys_name>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_ui_page_858c4e4197c611108e05fbc71153afbf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-18 15:18:55</sys_updated_on>
+    </sys_ui_page>
+</record_update>
