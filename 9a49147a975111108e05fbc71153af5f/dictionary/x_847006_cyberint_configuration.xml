@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Configuration" max_length="40" name="x_847006_cyberint_configuration" sizeclass="1" type="collection">
-        <element label="API Environment" mandatory="true" max_length="40" name="api_environment" type="string"/>
-        <element label="API Token" mandatory="true" max_length="255" name="api_token" type="password2"/>
-        <element label="Category" max_length="4000" name="category" type="glide_list"/>
+        <element hint="API Environment from Cyberint" label="API Environment" mandatory="true" max_length="40" name="api_environment" type="string"/>
+        <element hint="Cyberint API access token" label="API Token" mandatory="true" max_length="255" name="api_token" type="password2"/>
         <element label="Created date" max_length="40" name="created_date" type="glide_date_time"/>
-        <element label="Enrich alert" max_length="40" name="enrich_alert" type="boolean"/>
-        <element label="Environment" max_length="4000" name="environment" type="glide_list"/>
-        <element label="Instance Name" mandatory="true" max_length="40" name="instance_name" type="string"/>
-        <element label="Last fetch time" max_length="40" name="last_fetch_time" type="glide_date_time"/>
-        <element choice="1" label="Severity" max_length="4000" name="severity" type="glide_list">
+        <element hint="Mark for enrich alert with attachments and analysis report." label="Enrich alert" max_length="40" name="enrich_alert" type="boolean"/>
+        <element hint="Instance uniqe name" label="Instance Name" mandatory="true" max_length="40" name="instance_name" type="string"/>
+        <element hint="Get alerts modified since this date" label="Last fetch time" max_length="40" name="last_fetch_time" type="glide_date_time"/>
+        <element choice="1" hint="Alert sevirities to fetch" label="Severity" max_length="4000" name="severity" type="glide_list">
             <choice>
                 <element inactive_on_update="false" label="High" value="high"/>
                 <element inactive_on_update="false" label="Low" value="low"/>
@@ -16,8 +14,7 @@
                 <element inactive_on_update="false" label="Very High" value="very_high"/>
             </choice>
         </element>
-        <element label="Source" max_length="4000" name="source" type="glide_list"/>
-        <element choice="3" default="Enable" label="Instance Status" max_length="40" name="status" type="string">
+        <element choice="3" default="Enable" hint="Instance actication" label="Instance Status" max_length="40" name="status" type="string">
             <choice>
                 <element inactive_on_update="false" label="Disable" value="Disable"/>
                 <element inactive_on_update="false" label="Enable" value="Enable"/>
@@ -28,8 +25,6 @@
                 <element inactive_on_update="false" label="automated_attack_tools"/>
                 <element inactive_on_update="false" label="automated_attack_tools"/>
                 <element inactive_on_update="false" label="automated_attack_tools"/>
-                <element inactive_on_update="false" label="compromised_access_token"/>
-                <element inactive_on_update="false" label="compromised_customer_credentials"/>
                 <element inactive_on_update="false" label="compromised_employee_credentials"/>
                 <element inactive_on_update="false" label="compromised_payment_cards"/>
                 <element inactive_on_update="false" label="compromised_pii"/>
@@ -64,6 +59,8 @@
                 <element inactive_on_update="false" label="unauthorized_trading"/>
                 <element inactive_on_update="false" label="victim_report"/>
                 <element inactive_on_update="false" label="website_vulnerabilities"/>
+                <element inactive_on_update="false" label="automated_attack_tools" sequence="0"/>
+                <element inactive_on_update="false" label="automated_attack_tools" sequence="0"/>
                 <element inactive="true" inactive_on_update="true" label="automated_attack_tools" sequence="0"/>
             </choice>
         </element>

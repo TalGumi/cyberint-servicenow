@@ -29,7 +29,7 @@
     </sys_ws_definition>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</application>
+        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
         <file_path/>
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
@@ -62,10 +62,10 @@
         <sys_metadata>31708e0797d111108e05fbc71153afef</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>CyberInt_Connection_Try</sys_name>
-        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
         <sys_update_name>sys_ws_definition_31708e0797d111108e05fbc71153afef</sys_update_name>
         <sys_update_version display_value="sys_ws_definition_31708e0797d111108e05fbc71153afef">f142068797d111108e05fbc71153af4f</sys_update_version>

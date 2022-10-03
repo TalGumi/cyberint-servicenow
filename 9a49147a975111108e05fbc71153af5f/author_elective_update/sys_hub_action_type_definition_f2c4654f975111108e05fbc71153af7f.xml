@@ -43,7 +43,7 @@
     <sys_variable_value action="DELETE" query="document_key=f2c4654f975111108e05fbc71153af7f"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</application>
+        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
         <file_path/>
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
@@ -76,10 +76,10 @@
         <sys_metadata>f2c4654f975111108e05fbc71153af7f</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Set Details</sys_name>
-        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
         <sys_update_name>sys_hub_action_type_definition_f2c4654f975111108e05fbc71153af7f</sys_update_name>
         <sys_update_version display_value="sys_hub_action_type_definition_f2c4654f975111108e05fbc71153af7f">bac4654f975111108e05fbc71153af82</sys_update_version>
