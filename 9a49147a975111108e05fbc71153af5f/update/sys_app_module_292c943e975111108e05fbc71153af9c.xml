@@ -15,7 +15,7 @@
         <mobile_title>Schedules Jobs</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>sysauto_script</name>
-        <order/>
+        <order>200</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>292c943e975111108e05fbc71153af9c</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Schedules Jobs</sys_name>
         <sys_overrides/>
         <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_app_module_292c943e975111108e05fbc71153af9c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-18 13:55:12</sys_updated_on>
+        <sys_updated_on>2022-09-20 13:29:17</sys_updated_on>
         <timeline_page/>
         <title>Schedules Jobs</title>
         <uncancelable>false</uncancelable>
