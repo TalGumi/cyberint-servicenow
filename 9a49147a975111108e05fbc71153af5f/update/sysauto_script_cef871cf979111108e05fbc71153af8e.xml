@@ -64,16 +64,57 @@
 
         // set body filters with fields from credentials table
         var severities = instance.severity.toString().split(",");
+        var types = instance.type.toString().split(",");
 
         var rightnow = new GlideDateTime();
 
         var filters = {
             "severity": severities,
+            "type": types,
             "modification_date": {
                 "from": String(instance.last_fetch_time),
                 "to": String(rightnow)
             }
         };
+
+        if (instance.severity) {
+            if (instance.type) {
+                filters = {
+                    "severity": severities,
+                    "type": types,
+                    "modification_date": {
+                        "from": String(instance.last_fetch_time),
+                        "to": String(rightnow)
+                    }
+                };
+            } else {
+                filters = {
+                    "severity": severities,
+                    "modification_date": {
+                        "from": String(instance.last_fetch_time),
+                        "to": String(rightnow)
+                    }
+                };
+            }
+
+        } else {
+            if (instance.type) {
+                filters = {
+                    "type": types,
+                    "modification_date": {
+                        "from": String(instance.last_fetch_time),
+                        "to": String(rightnow)
+                    }
+                };
+            } else {
+                filters = {
+                    "modification_date": {
+                        "from": String(instance.last_fetch_time),
+                        "to": String(rightnow)
+                    }
+                };
+            }
+        }
 
         var body = {
             "page": page,
@@ -83,13 +124,13 @@
 
         r.setRequestBody(JSON.stringify(body));
 
-        //         gs.info("Fetch Request Body: " + r.getRequestBody());
+        gs.info("Fetch Request Body: " + r.getRequestBody());
         var response = r.execute();
         var responseBody = response.getBody();
         var httpStatus = response.getStatusCode();
 
         gs.debug(instance.instance_name + " - Fetch Response Status: " + httpStatus);
-        //         gs.info("Fetch Response Body: " + responseBody);
+        gs.info("Fetch Response Body: " + responseBody);
         var responseObj = JSON.parse(responseBody);
         return [responseObj, instance];
     }
@@ -132,7 +173,7 @@
             cia.targeted_brands = responseObj.alerts[i].targeted_brands.toString();
             cia.targeted_vectors = responseObj.alerts[i].targeted_vectors.toString();
             cia.threat_actor = responseObj.alerts[i].threat_actor;
-			cia.cyberint_alert = "https://"+instance.api_environment+".cyberint.io/alert/api/v1/alerts/ref_id/"+responseObj.alerts[i].ref_id;
+            cia.cyberint_alert = "https://" + instance.api_environment + ".cyberint.io/alert/api/v1/alerts/ref_id/" + responseObj.alerts[i].ref_id;
             if (!exist_alert) {
                 // Create new alerts in ServiceNow
                 cia.insert();
@@ -175,9 +216,9 @@
         instance.addQuery('api_token', '!=', 0);
         instance.query();
         instance.next();
-		// Check if instance is active 
+        // Check if instance is active 
         if (instance.status == 'Enable') {
-			gs.info(instance.instance_name + " - Instance Status is " + instance.status + " ; Start Pulling ");
+            gs.info(instance.instance_name + " - Instance Status is " + instance.status + " ; Start Pulling ");
             var x = 1;
             var total_alerts_to_fetch = 1;
             while (total_alerts_to_fetch > 0) {
@@ -198,10 +239,9 @@
             sn_instance.last_fetch_time = last_fetch_time;
             gs.debug(sn_instance.instance_name + " - last_fetch_time : " + sn_instance.last_fetch_time);
             sn_instance.update();
+        } else {
+            gs.info(instance.instance_name + " - Instance Status is " + instance.status);
         }
-		else{
-			gs.info(instance.instance_name + " - Instance Status is " + instance.status);
-		}
     } catch (ex) {
         var message = ex.message;
         gs.info(message);
@@ -212,14 +252,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>198</sys_mod_count>
+        <sys_mod_count>208</sys_mod_count>
         <sys_name>Cyberint_Pulling_Script</sys_name>
         <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-19 08:50:44</sys_updated_on>
+        <sys_updated_on>2022-10-11 09:14:09</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>

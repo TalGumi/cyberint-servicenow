@@ -20,48 +20,43 @@
                 <element inactive_on_update="false" label="Enable" value="Enable"/>
             </choice>
         </element>
-        <element choice="2" label="Type" max_length="4000" name="type" type="glide_list">
+        <element choice="1" label="Type" max_length="4000" name="type" type="glide_list">
             <choice>
-                <element inactive_on_update="false" label="automated_attack_tools"/>
-                <element inactive_on_update="false" label="automated_attack_tools"/>
-                <element inactive_on_update="false" label="automated_attack_tools"/>
-                <element inactive_on_update="false" label="compromised_employee_credentials"/>
-                <element inactive_on_update="false" label="compromised_payment_cards"/>
-                <element inactive_on_update="false" label="compromised_pii"/>
-                <element inactive_on_update="false" label="coupon_fraud"/>
-                <element inactive_on_update="false" label="defacement"/>
-                <element inactive_on_update="false" label="email_security_issues"/>
-                <element inactive_on_update="false" label="exploitable_ports"/>
-                <element inactive_on_update="false" label="exposed_cloud_storage"/>
-                <element inactive_on_update="false" label="exposed_web_interfaces"/>
-                <element inactive_on_update="false" label="extortion"/>
-                <element inactive_on_update="false" label="fake_job_posting"/>
-                <element inactive_on_update="false" label="hijackable_subdomains"/>
-                <element inactive_on_update="false" label="impersonation"/>
-                <element inactive_on_update="false" label="intellectual_property_infringement"/>
-                <element inactive_on_update="false" label="internal_information_disclosure"/>
-                <element inactive_on_update="false" label="lookalike_domain"/>
-                <element inactive_on_update="false" label="mail_servers_in_blacklist"/>
-                <element inactive_on_update="false" label="malicious_file"/>
-                <element inactive_on_update="false" label="malicious_insider"/>
-                <element inactive_on_update="false" label="money_laundering"/>
-                <element inactive_on_update="false" label="negative_sentiment"/>
-                <element inactive_on_update="false" label="official_social_media_profile"/>
-                <element inactive_on_update="false" label="phishing_email"/>
-                <element inactive_on_update="false" label="phishing_kit"/>
-                <element inactive_on_update="false" label="phishing_target_list"/>
-                <element inactive_on_update="false" label="phishing_website"/>
-                <element inactive_on_update="false" label="ransomware"/>
-                <element inactive_on_update="false" label="reconnaissance"/>
-                <element inactive_on_update="false" label="refund_fraud"/>
-                <element inactive_on_update="false" label="server_connected_to_botnet"/>
-                <element inactive_on_update="false" label="target_list"/>
-                <element inactive_on_update="false" label="unauthorized_trading"/>
-                <element inactive_on_update="false" label="victim_report"/>
-                <element inactive_on_update="false" label="website_vulnerabilities"/>
-                <element inactive_on_update="false" label="automated_attack_tools" sequence="0"/>
-                <element inactive_on_update="false" label="automated_attack_tools" sequence="0"/>
-                <element inactive="true" inactive_on_update="true" label="automated_attack_tools" sequence="0"/>
+                <element inactive_on_update="false" label="automated_attack_tools" value="automated_attack_tools"/>
+                <element inactive_on_update="false" label="compromised_employee_credentials" value="compromised_employee_credentials"/>
+                <element inactive_on_update="false" label="compromised_payment_cards" value="compromised_payment_cards"/>
+                <element inactive_on_update="false" label="compromised_pii" value="compromised_pii"/>
+                <element inactive_on_update="false" label="coupon_fraud" value="coupon_fraud"/>
+                <element inactive_on_update="false" label="defacement" value="defacement"/>
+                <element inactive_on_update="false" label="email_security_issues" value="email_security_issues"/>
+                <element inactive_on_update="false" label="exploitable_ports" value="exploitable_ports"/>
+                <element inactive_on_update="false" label="exposed_cloud_storage" value="exposed_cloud_storage"/>
+                <element inactive_on_update="false" label="exposed_web_interfaces" value="exposed_web_interfaces"/>
+                <element inactive_on_update="false" label="extortion" value="extortion"/>
+                <element inactive_on_update="false" label="fake_job_posting" value="fake_job_posting"/>
+                <element inactive_on_update="false" label="hijackable_subdomains" value="hijackable_subdomains"/>
+                <element inactive_on_update="false" label="impersonation" value="impersonation"/>
+                <element inactive_on_update="false" label="intellectual_property_infringement" value="intellectual_property_infringement"/>
+                <element inactive_on_update="false" label="internal_information_disclosure" value="internal_information_disclosure"/>
+                <element inactive_on_update="false" label="lookalike_domain" value="lookalike_domain"/>
+                <element inactive_on_update="false" label="mail_servers_in_blacklist" value="mail_servers_in_blacklist"/>
+                <element inactive_on_update="false" label="malicious_file" value="malicious_file"/>
+                <element inactive_on_update="false" label="malicious_insider" value="malicious_insider"/>
+                <element inactive_on_update="false" label="money_laundering" value="money_laundering"/>
+                <element inactive_on_update="false" label="negative_sentiment" value="negative_sentiment"/>
+                <element inactive_on_update="false" label="official_social_media_profile" value="official_social_media_profile"/>
+                <element inactive_on_update="false" label="phishing_email" value="phishing_email"/>
+                <element inactive_on_update="false" label="phishing_kit" value="phishing_kit"/>
+                <element inactive_on_update="false" label="phishing_target_list" value="phishing_target_list"/>
+                <element inactive_on_update="false" label="phishing_website" value="phishing_website"/>
+                <element inactive_on_update="false" label="ransomware" value="ransomware"/>
+                <element inactive_on_update="false" label="reconnaissance" value="reconnaissance"/>
+                <element inactive_on_update="false" label="refund_fraud" value="refund_fraud"/>
+                <element inactive_on_update="false" label="server_connected_to_botnet" value="server_connected_to_botnet"/>
+                <element inactive_on_update="false" label="target_list" value="target_list"/>
+                <element inactive_on_update="false" label="unauthorized_trading" value="unauthorized_trading"/>
+                <element inactive_on_update="false" label="victim_report" value="victim_report"/>
+                <element inactive_on_update="false" label="website_vulnerabilities" value="website_vulnerabilities"/>
             </choice>
         </element>
         <element label="Updated date" max_length="40" name="updated_date" type="glide_date_time"/>
