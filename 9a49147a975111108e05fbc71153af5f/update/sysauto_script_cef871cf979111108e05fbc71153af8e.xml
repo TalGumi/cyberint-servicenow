@@ -157,7 +157,7 @@
             cia.severity = responseObj.alerts[i].severity;
             cia.environment = responseObj.alerts[i].environment;
             cia.created_date = responseObj.alerts[i].created_date;
-            cia.update_date = responseObj.alerts[i].modification_date;
+            cia.updated_date = responseObj.alerts[i].modification_date;
             cia.acknowledged_by = responseObj.alerts[i].acknowledged_by;
             if (responseObj.alerts[i].acknowledged_by) {
                 cia.acknowledged_by = responseObj.alerts[i].acknowledged_by.email;
@@ -238,6 +238,7 @@
             gs.info(sn_instance.instance_name + " - Finish fetch alerts");
             sn_instance.last_fetch_time = last_fetch_time;
             gs.debug(sn_instance.instance_name + " - last_fetch_time : " + sn_instance.last_fetch_time);
+			sn_instance.script_last_run_time = new GlideDateTime();
             sn_instance.update();
         } else {
             gs.info(instance.instance_name + " - Instance Status is " + instance.status);
@@ -252,14 +253,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>208</sys_mod_count>
+        <sys_mod_count>210</sys_mod_count>
         <sys_name>Cyberint_Pulling_Script</sys_name>
         <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-10-11 09:14:09</sys_updated_on>
+        <sys_updated_on>2022-10-13 11:29:41</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
