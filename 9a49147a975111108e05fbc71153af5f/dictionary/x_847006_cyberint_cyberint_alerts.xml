@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="CyberInt Alerts" max_length="40" name="x_847006_cyberint_cyberint_alerts" sizeclass="14" type="collection">
+    <element label="CyberInt Alerts" max_length="40" name="x_847006_cyberint_cyberint_alerts" sizeclass="1410" type="collection">
         <element label="Acknowledged by" max_length="40" name="acknowledged_by" read_only="true" type="string"/>
         <element label="Acknowledged date" max_length="40" name="acknowledged_date" read_only="true" type="glide_date_time"/>
         <element label="Alert ID" mandatory="true" max_length="40" name="alert_id" read_only="true" type="string"/>
@@ -17,7 +17,7 @@
         <element label="Confidence" max_length="40" name="confidence" read_only="true" type="integer"/>
         <element label="Created by" max_length="40" name="created_by" read_only="true" type="string"/>
         <element label="Created Date" max_length="40" name="created_date" read_only="true" type="glide_date_time"/>
-        <element label="Cyberint alert" max_length="4000" name="cyberint_alert" read_only="true" type="string"/>
+        <element label="Cyberint alert" max_length="4000" name="cyberint_alert" read_only="true" type="url"/>
         <element label="description" max_length="1000" name="description" read_only="true" type="string"/>
         <element label="environment" max_length="40" name="environment" read_only="true" type="string"/>
         <element label="Impacts" max_length="4000" name="impacts" read_only="true" type="glide_list"/>

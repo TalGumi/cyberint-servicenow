@@ -6,7 +6,7 @@
         <element hint="Mark for enrich alert with attachments and analysis report." label="Enrich alert" max_length="40" name="enrich_alert" type="boolean"/>
         <element hint="Instance uniqe name" label="Instance Name" mandatory="true" max_length="40" name="instance_name" type="string"/>
         <element hint="Get alerts modified since this date" label="Last fetch time" max_length="40" name="last_fetch_time" type="glide_date_time"/>
-        <element hint="Pulling script last run time UTC" label="Script last run time" max_length="40" name="script_last_run_time" read_only="true" type="glide_date_time"/>
+        <element hint="Pulling script last run time" label="Script last run time" max_length="40" name="script_last_run_time" read_only="true" type="glide_date_time"/>
         <element choice="1" hint="Alert sevirities to fetch" label="Severity" max_length="4000" name="severity" type="glide_list">
             <choice>
                 <element inactive_on_update="false" label="High" value="high"/>
