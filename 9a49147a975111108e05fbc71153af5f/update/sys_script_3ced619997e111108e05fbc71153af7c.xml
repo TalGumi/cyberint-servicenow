@@ -28,7 +28,35 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    function updateCloserData(alert_id) {
+        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_API', 'GET single alert');
+        var instance = new GlideRecord('x_847006_cyberint_configuration');
 
+        instance.addQuery('api_token', '!=', 0);
+        instance.query();
+        instance.next();
+
+        r.setStringParameter('api_environment', instance.api_environment);
+        r.setStringParameter('alert_id', alert_id);
+        var decrypted = instance.api_token.getDecryptedValue();
+
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
+        var response = r.execute();
+        var responseStatusCode = response.getStatusCode();
+        var responseBody = response.getBody();
+        var responseObj = JSON.parse(responseBody);
+
+        gs.info(instance.instance_name + " : UPDATE Alert " + alert_id + " closed by. Status code: " + responseStatusCode);
+
+        var cia = new GlideRecord('x_847006_cyberint_cyberint_alerts');
+        cia.addQuery('alert_id', '=', alert_id);
+        cia.query();
+        exist_alert = cia.next();
+        if (exist_alert) {
+            cia.closing_user = responseObj.alert.closed_by.email;
+            cia.update();
+        }
+    }
     // Add your code here
 
     if (current.status != "open") {
@@ -71,7 +99,9 @@
 
                 var httpStatus = response.getStatusCode();
                 var responseBody = response.getBody();
-                gs.info(instance.instance_name + " - Close Alert " + current.alert_id + " Response Status (Close Alert) : " + httpStatus + ", Response Body : " + responseBody);
+                gs.info(instance.instance_name + " - Close Alert " + current.alert_id + " Response Status (Close Alert) : " + httpStatus);
+
+                updateCloserData(current.alert_id);
             } catch (ex) {
                 var message = ex.message;
                 gs.info(message);
@@ -89,7 +119,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3ced619997e111108e05fbc71153af7c</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>Mirroring</sys_name>
         <sys_overrides/>
         <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -97,7 +127,7 @@
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_script_3ced619997e111108e05fbc71153af7c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-19 08:54:11</sys_updated_on>
+        <sys_updated_on>2022-10-25 10:14:44</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>
