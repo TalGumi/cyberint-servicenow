@@ -45,8 +45,13 @@
             gs.addErrorMessage("Close alert required spsified closing reason field");
         }
     } else {
+        if (current.closing_reason) {
+            current.setAbortAction(true);
+            gs.addErrorMessage("You spsified closing reason for alert that not closed. You should change alert status to Closed or not spsified closing reason.");
+        }
         current.closing_time = null;
         current.closing_reason = '';
+
     }
 
 })(current, previous);]]></script>
@@ -56,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9be03cbe979111108e05fbc71153afe3</sys_id>
-        <sys_mod_count>55</sys_mod_count>
+        <sys_mod_count>56</sys_mod_count>
         <sys_name>Validate closing reason &amp; date</sys_name>
         <sys_overrides/>
         <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -64,7 +69,7 @@
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_script_9be03cbe979111108e05fbc71153afe3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-06 11:55:36</sys_updated_on>
+        <sys_updated_on>2022-11-03 12:05:41</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
