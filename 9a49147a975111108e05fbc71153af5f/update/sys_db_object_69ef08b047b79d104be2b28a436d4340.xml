@@ -24,17 +24,17 @@
         <sys_class_path/>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-17 11:19:39</sys_created_on>
-        <sys_id>aba964f6979111108e05fbc71153affb</sys_id>
+        <sys_id>69ef08b047b79d104be2b28a436d4340</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>CyberInt Alerts</sys_name>
         <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
-        <sys_update_name>sys_db_object_aba964f6979111108e05fbc71153affb</sys_update_name>
+        <sys_update_name>sys_db_object_69ef08b047b79d104be2b28a436d4340</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-08-17 11:19:40</sys_updated_on>
         <update_access>true</update_access>
-        <user_role display_value="x_847006_cyberint.user" name="x_847006_cyberint.user">960aac76979111108e05fbc71153af2e</user_role>
+        <user_role display_value="x_847006_cyberint.cyberint_alerts_user" name="x_847006_cyberint.user">960aac76979111108e05fbc71153af2e</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>
