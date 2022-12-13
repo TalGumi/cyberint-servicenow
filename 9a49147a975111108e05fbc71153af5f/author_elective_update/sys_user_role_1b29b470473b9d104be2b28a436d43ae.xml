@@ -49,7 +49,7 @@
         <update_guid_history>71d9f0b05f3b9d102f323db241179f84:543963335,4199f070a73b9d105fd06f7b208f589a:976509404</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_847006_cyberint.UI_page">2b6a70f0473b9d104be2b28a436d4376</sys_audit_delete>
+        <sys_audit_delete display_value="">2b6a70f0473b9d104be2b28a436d4376</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>TalGumi</sys_created_by>
         <sys_created_on>2022-12-13 14:00:25</sys_created_on>
