@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_847006_cyberint.UI_page</name>
+        <requires_subscription>1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>UI_page</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>TalGumi</sys_created_by>
+        <sys_created_on>2022-12-13 13:56:42</sys_created_on>
+        <sys_id>1b29b470473b9d104be2b28a436d43ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_847006_cyberint.UI_page</sys_name>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_user_role_1b29b470473b9d104be2b28a436d43ae</sys_update_name>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2022-12-13 13:57:50</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
+        <file_path/>
+        <instance_id>caa8766edbd7d9909df22f17d4961926</instance_id>
+        <instance_name>ven05816</instance_name>
+        <name>sys_user_role_1b29b470473b9d104be2b28a436d43ae</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_847006_cyberint.UI_page</name><requires_subscription>1</requires_subscription><scoped_admin>false</scoped_admin><suffix>UI_page</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>TalGumi</sys_created_by><sys_created_on>2022-12-13 13:56:42</sys_created_on><sys_id>1b29b470473b9d104be2b28a436d43ae</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_847006_cyberint.UI_page</sys_name><sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_user_role_1b29b470473b9d104be2b28a436d43ae</sys_update_name><sys_updated_by>TalGumi</sys_updated_by><sys_updated_on>2022-12-13 13:57:50</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>543963335</payload_hash>
+        <record_name>x_847006_cyberint.UI_page</record_name>
+        <reverted_from/>
+        <source>c9ff00b047b79d104be2b28a436d4360</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>TalGumi</sys_created_by>
+        <sys_created_on>2022-12-13 13:57:50</sys_created_on>
+        <sys_id>79d9f0b0473b9d104be2b28a436d4384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1850bc703ee0000001</sys_recorded_at>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2022-12-13 13:57:50</sys_updated_on>
+        <type>Role</type>
+        <update_guid>71d9f0b05f3b9d102f323db241179f84</update_guid>
+        <update_guid_history>71d9f0b05f3b9d102f323db241179f84:543963335,4199f070a73b9d105fd06f7b208f589a:976509404</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_847006_cyberint.UI_page">2b6a70f0473b9d104be2b28a436d4376</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>TalGumi</sys_created_by>
+        <sys_created_on>2022-12-13 14:00:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>2e1a21bf52a94860be40ad05fefd8840</sys_id>
+        <sys_metadata>1b29b470473b9d104be2b28a436d43ae</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_847006_cyberint.UI_page</sys_name>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
+        <sys_update_name>sys_user_role_1b29b470473b9d104be2b28a436d43ae</sys_update_name>
+        <sys_update_version display_value="sys_user_role_1b29b470473b9d104be2b28a436d43ae">79d9f0b0473b9d104be2b28a436d4384</sys_update_version>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2022-12-13 14:00:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
