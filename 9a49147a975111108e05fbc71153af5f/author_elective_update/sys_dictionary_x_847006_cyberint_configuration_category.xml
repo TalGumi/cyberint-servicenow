@@ -114,7 +114,7 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Category</sys_name>
         <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
-        <sys_parent display_value="Configuration">b851ec99973511108e05fbc71153af2a</sys_parent>
+        <sys_parent display_value="">b851ec99973511108e05fbc71153af2a</sys_parent>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
