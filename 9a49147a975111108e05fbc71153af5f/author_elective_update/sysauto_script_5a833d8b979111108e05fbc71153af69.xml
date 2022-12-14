@@ -119,7 +119,7 @@
         <reverted_from/>
         <source>da005cb047b79d104be2b28a436d4322</source>
         <source_table>sys_upgrade_history</source_table>
-        <state>previous</state>
+        <state>current</state>
         <sys_created_by>TalGumi</sys_created_by>
         <sys_created_on>2022-12-13 10:55:30</sys_created_on>
         <sys_id>7a1054f047b79d104be2b28a436d438e</sys_id>
