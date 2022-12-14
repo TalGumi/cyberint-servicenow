@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Configuration" max_length="40" name="x_847006_cyberint_configuration" sizeclass="2" type="collection">
+    <element label="Configuration" max_length="40" name="x_847006_cyberint_configuration" sizeclass="1" type="collection">
         <element hint="API Environment from Cyberint" label="API Environment" mandatory="true" max_length="40" name="api_environment" type="string"/>
         <element hint="Cyberint API access token" label="API Token" mandatory="true" max_length="255" name="api_token" type="password2"/>
         <element label="Created date" max_length="40" name="created_date" type="glide_date_time"/>
