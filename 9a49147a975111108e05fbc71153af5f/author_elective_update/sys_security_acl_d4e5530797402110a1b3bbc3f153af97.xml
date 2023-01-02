@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description/>
+        <name>x_cyit_cyberint_support_ui_pageddddd</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-02 11:24:01</sys_created_on>
+        <sys_id>d4e5530797402110a1b3bbc3f153af97</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_cyit_cyberint_support_ui_pageddddd</sys_name>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_security_acl_d4e5530797402110a1b3bbc3f153af97</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-02 11:24:43</sys_updated_on>
+        <type display_value="ui_page">ui_page</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
+        <file_path/>
+        <instance_id>696ac897db305014e26fd7c8f496198b</instance_id>
+        <instance_name>dev104543</instance_name>
+        <name>sys_security_acl_d4e5530797402110a1b3bbc3f153af97</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description/><name>x_cyit_cyberint_support_ui_pageddddd</name><operation display_value="read">read</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-01-02 11:24:01</sys_created_on><sys_id>d4e5530797402110a1b3bbc3f153af97</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_cyit_cyberint_support_ui_pageddddd</sys_name><sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_security_acl_d4e5530797402110a1b3bbc3f153af97</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-01-02 11:24:43</sys_updated_on><type display_value="ui_page">ui_page</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-949355004</payload_hash>
+        <record_name>x_cyit_cyberint_support_ui_pageddddd</record_name>
+        <reverted_from/>
+        <source>639dd2f1971a5110a1b3bbc3f153afdb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-02 11:24:44</sys_created_on>
+        <sys_id>5296db0797402110a1b3bbc3f153af92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185723a086b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-02 11:24:44</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>1a96db07de402110e658b90ebe3b1a91</update_guid>
+        <update_guid_history>1a96db07de402110e658b90ebe3b1a91:-949355004,7f665f07ed402110dba9c200dcf45e72:-465850858</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-02 11:24:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>5d73254831cb4c628bd08fcd17bd66c4</sys_id>
+        <sys_metadata>d4e5530797402110a1b3bbc3f153af97</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_cyit_cyberint_support_ui_pageddddd</sys_name>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
+        <sys_update_name>sys_security_acl_d4e5530797402110a1b3bbc3f153af97</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_d4e5530797402110a1b3bbc3f153af97">5296db0797402110a1b3bbc3f153af92</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-02 11:24:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
