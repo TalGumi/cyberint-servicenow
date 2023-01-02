@@ -1,80 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_choice action="INSERT_OR_UPDATE" field="status" table="x_cyit_cyberint_cyberint_alerts" version="3">
+    <sys_choice action="INSERT_OR_UPDATE" field="status" table="x_847006_cyberint_cyberint_alerts" version="3">
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>status</element>
-            <name>x_cyit_cyberint_cyberint_alerts</name>
+            <name>x_847006_cyberint_cyberint_alerts</name>
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2022-08-17 11:59:05</sys_created_on>
-            <sys_id>48137cfe979111108e05fbc71153af7c</sys_id>
+            <sys_id>ec1d65c197f39d1082e2babfe153afd4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>status</sys_name>
             <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
             <sys_policy/>
             <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
-            <sys_update_name>sys_choice_x_cyit_cyberint_cyberint_alerts_status</sys_update_name>
+            <sys_update_name>sys_choice_x_847006_cyberint_cyberint_alerts_status</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-08-17 11:59:05</sys_updated_on>
         </sys_choice_set>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>status</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Acknowledged</label>
-            <language>en</language>
-            <name>x_cyit_cyberint_cyberint_alerts</name>
-            <sequence/>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-25 06:41:33</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>64177055972111108e05fbc71153afd7</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-09-08 07:50:41</sys_updated_on>
-            <value>acknowledged</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>status</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Closed</label>
-            <language>en</language>
-            <name>x_cyit_cyberint_cyberint_alerts</name>
-            <sequence/>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:59:05</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>43f2fcfe979111108e05fbc71153af51</sys_id>
-            <sys_mod_count>4</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-09-08 07:51:15</sys_updated_on>
-            <value>closed</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>status</element>
-            <hint/>
-            <inactive>true</inactive>
-            <label>Open</label>
-            <language>en</language>
-            <name>x_cyit_cyberint_cyberint_alerts</name>
-            <sequence/>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-08-17 11:59:11</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>4c13bcfe979111108e05fbc71153affa</sys_id>
-            <sys_mod_count>5</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-09-08 07:53:08</sys_updated_on>
-            <value>open</value>
-        </sys_choice>
     </sys_choice>
 </record_update>

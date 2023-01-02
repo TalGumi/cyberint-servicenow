@@ -35,7 +35,7 @@
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
-        <user_role display_value="x_cyit_cyberint.user" name="x_cyit_cyberint.user">960aac76979111108e05fbc71153af2e</user_role>
+        <user_role display_value="x_847006_cyberint.user" name="x_cyit_cyberint.user">960aac76979111108e05fbc71153af2e</user_role>
         <vendor/>
         <vendor_prefix/>
         <version>1.0.0</version>
