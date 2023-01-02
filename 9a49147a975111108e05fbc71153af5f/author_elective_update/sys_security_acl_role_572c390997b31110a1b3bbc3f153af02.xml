@@ -42,7 +42,7 @@
         <update_guid_history>e95c3105dcf31110da8ed4e6f109c772:2061119938</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value=".x_847006_cyberint.admin">108c710597f31110a1b3bbc3f153af05</sys_audit_delete>
+        <sys_audit_delete display_value="">108c710597f31110a1b3bbc3f153af05</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-12-14 13:27:35</sys_created_on>
