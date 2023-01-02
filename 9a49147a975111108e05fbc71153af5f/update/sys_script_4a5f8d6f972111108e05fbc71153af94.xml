@@ -63,9 +63,9 @@
         <sys_mod_count>59</sys_mod_count>
         <sys_name>Validate last fetch time range &amp; name</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint ServiceNow Security App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_script_4a5f8d6f972111108e05fbc71153af94</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-09-18 08:38:38</sys_updated_on>

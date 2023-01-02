@@ -75,7 +75,7 @@
     </sys_dictionary>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
+        <application display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</application>
         <file_path/>
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
@@ -113,10 +113,10 @@
         <sys_metadata>4ead0aab972511108e05fbc71153af86</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Attachment</sys_name>
-        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint ServiceNow Security App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent display_value="">aba964f6979111108e05fbc71153affb</sys_parent>
         <sys_policy/>
-        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
         <sys_update_name>sys_dictionary_x_cyit_cyberint_cyberint_alerts_attachment</sys_update_name>
         <sys_update_version display_value="sys_dictionary_x_cyit_cyberint_cyberint_alerts_attachment">3750c5cd974211108e05fbc71153aff3</sys_update_version>

@@ -24,7 +24,7 @@
     </sys_security_acl>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
+        <application display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</application>
         <file_path/>
         <instance_id>696ac897db305014e26fd7c8f496198b</instance_id>
         <instance_name>dev104543</instance_name>
@@ -57,10 +57,10 @@
         <sys_metadata>d4e5530797402110a1b3bbc3f153af97</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_cyit_cyberint_support_ui_pageddddd</sys_name>
-        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint ServiceNow Security App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
         <sys_update_name>sys_security_acl_d4e5530797402110a1b3bbc3f153af97</sys_update_name>
         <sys_update_version display_value="sys_security_acl_d4e5530797402110a1b3bbc3f153af97">5296db0797402110a1b3bbc3f153af92</sys_update_version>

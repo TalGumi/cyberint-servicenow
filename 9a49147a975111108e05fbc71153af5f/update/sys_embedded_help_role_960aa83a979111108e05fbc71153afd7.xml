@@ -8,9 +8,9 @@
         <sys_id>960aa83a979111108e05fbc71153afd7</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>960aac76979111108e05fbc71153af2e</sys_name>
-        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint ServiceNow Security App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_embedded_help_role_960aa83a979111108e05fbc71153afd7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-08-17 11:19:39</sys_updated_on>

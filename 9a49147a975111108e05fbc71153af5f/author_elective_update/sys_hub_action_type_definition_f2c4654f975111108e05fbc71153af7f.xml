@@ -30,7 +30,7 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Set Details</sys_name>
         <sys_overrides/>
-        <sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_f2c4654f975111108e05fbc71153af7f</sys_update_name>
@@ -43,12 +43,12 @@
     <sys_variable_value action="DELETE" query="document_key=f2c4654f975111108e05fbc71153af7f"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
+        <application display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</application>
         <file_path/>
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
         <name>sys_hub_action_type_definition_f2c4654f975111108e05fbc71153af7f</name>
-        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition"><sys_hub_action_type_definition action="INSERT_OR_UPDATE"><access>public</access><acls/><action_status/><action_template/><active>true</active><annotation/><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from/><copied_from_name/><description/><ih_action>false</ih_action><internal_name>set_details</internal_name><label_cache/><latest_snapshot/><master_snapshot/><name>Set Details</name><natlang/><outputs/><state>draft</state><sys_class_name>sys_hub_action_type_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-18 10:14:50</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f2c4654f975111108e05fbc71153af7f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Set Details</sys_name><sys_overrides/><sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_hub_action_type_definition_f2c4654f975111108e05fbc71153af7f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-18 10:14:50</sys_updated_on><system_level>false</system_level><type/></sys_hub_action_type_definition><sys_translated_text action="delete_multiple" query="documentkey=f2c4654f975111108e05fbc71153af7f"/><sys_variable_value action="delete_multiple" query="document_key=f2c4654f975111108e05fbc71153af7f"/></record_update>]]></payload>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition"><sys_hub_action_type_definition action="INSERT_OR_UPDATE"><access>public</access><acls/><action_status/><action_template/><active>true</active><annotation/><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from/><copied_from_name/><description/><ih_action>false</ih_action><internal_name>set_details</internal_name><label_cache/><latest_snapshot/><master_snapshot/><name>Set Details</name><natlang/><outputs/><state>draft</state><sys_class_name>sys_hub_action_type_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-18 10:14:50</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f2c4654f975111108e05fbc71153af7f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Set Details</sys_name><sys_overrides/><sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_hub_action_type_definition_f2c4654f975111108e05fbc71153af7f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-18 10:14:50</sys_updated_on><system_level>false</system_level><type/></sys_hub_action_type_definition><sys_translated_text action="delete_multiple" query="documentkey=f2c4654f975111108e05fbc71153af7f"/><sys_variable_value action="delete_multiple" query="document_key=f2c4654f975111108e05fbc71153af7f"/></record_update>]]></payload>
         <payload_hash>1080895772</payload_hash>
         <record_name>Set Details</record_name>
         <reverted_from/>
@@ -76,10 +76,10 @@
         <sys_metadata>f2c4654f975111108e05fbc71153af7f</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Set Details</sys_name>
-        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint ServiceNow Security App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
         <sys_update_name>sys_hub_action_type_definition_f2c4654f975111108e05fbc71153af7f</sys_update_name>
         <sys_update_version display_value="sys_hub_action_type_definition_f2c4654f975111108e05fbc71153af7f">bac4654f975111108e05fbc71153af82</sys_update_version>

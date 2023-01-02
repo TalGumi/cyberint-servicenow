@@ -19,7 +19,7 @@
         <sys_id>65be354497e911108e05fbc71153af3f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Postt</sys_name>
-        <sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_rest_message_fn_65be354497e911108e05fbc71153af3f</sys_update_name>
@@ -31,12 +31,12 @@
     </sys_rest_message_fn>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Cyberint">9a49147a975111108e05fbc71153af5f</application>
+        <application display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</application>
         <file_path/>
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
         <name>sys_rest_message_fn_65be354497e911108e05fbc71153af3f</name>
-        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>inherit_from_parent</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content/><function_name>Postt</function_name><http_method>post</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>Cyberint_Puller [ Postt ]</qualified_name><rest_endpoint/><rest_message display_value="Cyberint_Puller">b30eb90497e911108e05fbc71153affc</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-21 14:42:19</sys_created_on><sys_id>65be354497e911108e05fbc71153af3f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Postt</sys_name><sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_rest_message_fn_65be354497e911108e05fbc71153af3f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-21 14:42:19</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>inherit_from_parent</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content/><function_name>Postt</function_name><http_method>post</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>Cyberint_Puller [ Postt ]</qualified_name><rest_endpoint/><rest_message display_value="Cyberint_Puller">b30eb90497e911108e05fbc71153affc</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-21 14:42:19</sys_created_on><sys_id>65be354497e911108e05fbc71153af3f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Postt</sys_name><sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_rest_message_fn_65be354497e911108e05fbc71153af3f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-21 14:42:19</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
         <payload_hash>1514976000</payload_hash>
         <record_name>Postt</record_name>
         <reverted_from/>
@@ -64,10 +64,10 @@
         <sys_metadata>65be354497e911108e05fbc71153af3f</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Postt</sys_name>
-        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint ServiceNow Security App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent display_value="Cyberint_API">b30eb90497e911108e05fbc71153affc</sys_parent>
         <sys_policy/>
-        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
         <sys_update_name>sys_rest_message_fn_65be354497e911108e05fbc71153af3f</sys_update_name>
         <sys_update_version display_value="sys_rest_message_fn_65be354497e911108e05fbc71153af3f">8ace394497e911108e05fbc71153afbf</sys_update_version>
