@@ -21,6 +21,7 @@
                 <element inactive_on_update="false" label="Enable" value="Enable"/>
             </choice>
         </element>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
         <element choice="1" label="Type" max_length="4000" name="type" type="glide_list">
             <choice>
                 <element inactive_on_update="false" label="automated attack tools" value="automated_attack_tools"/>
@@ -61,5 +62,8 @@
             </choice>
         </element>
         <element label="Updated date" max_length="40" name="updated_date" type="glide_date_time"/>
+        <index name="index">
+            <element name="sys_domain"/>
+        </index>
     </element>
 </database>

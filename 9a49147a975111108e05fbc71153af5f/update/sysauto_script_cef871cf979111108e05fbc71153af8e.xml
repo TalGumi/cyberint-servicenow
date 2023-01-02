@@ -29,7 +29,7 @@
         var alert_file_name = alert_id + "_attachment_" + file_name;
         r.saveResponseBodyAsAttachment('x_cyit_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
 
-        var response = r.execute();
+        var response = r.executeAsync();
         var httpResponseStatus = response.getStatusCode();
         gs.debug(instance.instance_name + " - Add Attachment for alert " + alert_id + " : Status Code " + httpResponseStatus);
     }
@@ -44,7 +44,7 @@
         var alert_file_name = alert_id + "_analysisReport_" + file_name;
         r.saveResponseBodyAsAttachment('x_cyit_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
 
-        var response = r.execute();
+        var response = r.executeAsync();
         var httpResponseStatus = response.getStatusCode();
         gs.debug(instance.instance_name + " - Add Analysis Report for alert " + alert_id + " : Status Code " + httpResponseStatus);
     }
@@ -125,7 +125,7 @@
         r.setRequestBody(JSON.stringify(body));
 
 //         gs.info("Fetch Request Body: " + r.getRequestBody());
-        var response = r.execute();
+        var response = r.executeAsync();
         var responseBody = response.getBody();
         var httpStatus = response.getStatusCode();
 
@@ -253,14 +253,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-08-18 11:45:31</sys_created_on>
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
-        <sys_mod_count>213</sys_mod_count>
+        <sys_mod_count>214</sys_mod_count>
         <sys_name>Cyberint_Pulling_Script</sys_name>
         <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
         <sys_updated_by>TalGumi</sys_updated_by>
-        <sys_updated_on>2023-01-02 11:30:00</sys_updated_on>
+        <sys_updated_on>2023-01-02 13:41:22</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
