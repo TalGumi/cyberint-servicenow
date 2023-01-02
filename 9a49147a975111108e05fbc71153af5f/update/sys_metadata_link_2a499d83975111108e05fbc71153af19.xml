@@ -9,7 +9,7 @@
         <application display_value="ALL">35aa573fd7802200bdbaee5b5e610375</application>
         <base_path/>
         <capabilities/>
-        <connection_alias display_value="x_847006_cyberint.cyberint_credentials">feea3c3a97d111108e05fbc71153af09</connection_alias>
+        <connection_alias display_value="x_cyit_cyberint.cyberint_credentials">feea3c3a97d111108e05fbc71153af09</connection_alias>
         <connection_retries>0</connection_retries>
         <connection_timeout/>
         <connection_url>https://argos-demo.cyberint.io/alert/api/v1/alerts</connection_url>
@@ -45,7 +45,7 @@
         <sys_id>2a499d83975111108e05fbc71153af19</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>cyberint_user</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_metadata_link_2a499d83975111108e05fbc71153af19</sys_update_name>

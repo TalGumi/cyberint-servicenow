@@ -12,13 +12,13 @@
         <sys_id>9e69c02f1b3991104c029758b04bcb31</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Test Connection</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_ux_form_action_9e69c02f1b3991104c029758b04bcb31</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-09-13 13:23:56</sys_updated_on>
-        <table>x_847006_cyberint_configuration</table>
+        <table>x_cyit_cyberint_configuration</table>
         <ui_action display_value="Test Connection">70e40ce71b3991104c029758b04bcbc4</ui_action>
     </sys_ux_form_action>
 </record_update>

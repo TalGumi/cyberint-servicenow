@@ -13,7 +13,7 @@
         <is_extendable>false</is_extendable>
         <label>Configuration</label>
         <live_feed_enabled>false</live_feed_enabled>
-        <name>x_847006_cyberint_configuration</name>
+        <name>x_cyit_cyberint_configuration</name>
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
@@ -27,7 +27,7 @@
         <sys_id>b851ec99973511108e05fbc71153af2a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Configuration</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_db_object_b851ec99973511108e05fbc71153af2a</sys_update_name>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_847006_cyberint_configuration" version="2" view="">
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_cyit_cyberint_configuration" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>instance_name</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>api_environment</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>api_token</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>last_fetch_time</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -63,7 +63,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>enrich_alert</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -78,7 +78,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>status</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
@@ -93,7 +93,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>severity</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
@@ -108,7 +108,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>type</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
@@ -123,7 +123,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>source</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>8</position>
@@ -138,7 +138,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>environment</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>9</position>
@@ -153,7 +153,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>category</element>
-            <list_id display_value="x_847006_cyberint_configuration" element="NULL" name="x_847006_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
+            <list_id display_value="x_cyit_cyberint_configuration" element="NULL" name="x_cyit_cyberint_configuration" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31091d0d97c211108e05fbc71153af44</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>10</position>
@@ -170,7 +170,7 @@
             <element/>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <name>x_847006_cyberint_configuration</name>
+            <name>x_cyit_cyberint_configuration</name>
             <parent/>
             <position/>
             <relationship/>
@@ -182,11 +182,11 @@
             <sys_domain_path>/</sys_domain_path>
             <sys_id>31091d0d97c211108e05fbc71153af44</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_847006_cyberint_configuration</sys_name>
-            <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+            <sys_name>x_cyit_cyberint_configuration</sys_name>
+            <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
             <sys_policy/>
             <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
-            <sys_update_name>sys_ui_list_x_847006_cyberint_configuration_null</sys_update_name>
+            <sys_update_name>sys_ui_list_x_cyit_cyberint_configuration_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2022-09-18 11:02:42</sys_updated_on>
             <sys_user/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="created_date" table="x_847006_cyberint_cyberint_alerts">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="created_date" table="x_cyit_cyberint_cyberint_alerts">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -35,7 +35,7 @@
         <internal_type display_value="">glide_date_time</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_847006_cyberint_cyberint_alerts</name>
+        <name>x_cyit_cyberint_cyberint_alerts</name>
         <next_element/>
         <primary>false</primary>
         <read_only>true</read_only>
@@ -56,10 +56,10 @@
         <sys_id>2ff4f73c97e151108e05fbc71153af30</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>Cyberint Created Date</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
-        <sys_update_name>sys_dictionary_x_847006_cyberint_cyberint_alerts_created_date</sys_update_name>
+        <sys_update_name>sys_dictionary_x_cyit_cyberint_cyberint_alerts_created_date</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-11-03 12:07:19</sys_updated_on>
         <table_reference>false</table_reference>

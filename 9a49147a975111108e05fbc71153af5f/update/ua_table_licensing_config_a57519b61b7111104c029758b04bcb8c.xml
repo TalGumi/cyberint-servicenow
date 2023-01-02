@@ -4,7 +4,7 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_847006_cyberint_configuration</name>
+        <name>x_cyit_cyberint_configuration</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
@@ -14,8 +14,8 @@
         <sys_created_on>2022-09-06 15:26:28</sys_created_on>
         <sys_id>a57519b61b7111104c029758b04bcb8c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_847006_cyberint_configuration</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_name>x_cyit_cyberint_configuration</sys_name>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>ua_table_licensing_config_a57519b61b7111104c029758b04bcb8c</sys_update_name>

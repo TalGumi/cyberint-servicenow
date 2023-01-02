@@ -19,7 +19,7 @@
         <script><![CDATA[(function executRule(current, previous) {
 
     function attachments(alert_id, alert_sys_id, attachment_id, file_name, instance) {
-        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_API', 'Get alert attachments');
+        var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'Get alert attachments');
         var decrypted = instance.api_token.getDecryptedValue();
 
         r.setStringParameter('alert_id', alert_id);
@@ -27,7 +27,7 @@
         r.setStringParameter('api_environment', instance.api_environment);
         r.setRequestHeader("Cookie", "access_token=" + decrypted);
         var alert_file_name = alert_id + "_attachment_" + file_name;
-        r.saveResponseBodyAsAttachment('x_847006_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
+        r.saveResponseBodyAsAttachment('x_cyit_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
 
         var response = r.execute();
         var httpResponseStatus = response.getStatusCode();
@@ -35,14 +35,14 @@
     }
 
     function analysisReport(alert_id, alert_sys_id, file_name, instance) {
-        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_API', 'Get analysis report');
+        var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'Get analysis report');
         var decrypted = instance.api_token.getDecryptedValue();
 
         r.setStringParameter('alert_id', alert_id);
         r.setStringParameter('api_environment', instance.api_environment);
         r.setRequestHeader("Cookie", "access_token=" + decrypted);
         var alert_file_name = alert_id + "_analysisReport_" + file_name;
-        r.saveResponseBodyAsAttachment('x_847006_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
+        r.saveResponseBodyAsAttachment('x_cyit_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
 
         var response = r.execute();
         var httpResponseStatus = response.getStatusCode();
@@ -50,10 +50,10 @@
     }
 
     function fetchAlerts(page) {
-        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_API', 'POST - Fetch alerts from CyberInt');
+        var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'POST - Fetch alerts from CyberInt');
 
         // set cookie header with token from credentials table
-        var instance = new GlideRecord('x_847006_cyberint_configuration');
+        var instance = new GlideRecord('x_cyit_cyberint_configuration');
         instance.addQuery('api_token', '!=', 0);
         instance.query();
         instance.next();
@@ -137,7 +137,7 @@
 
     function createAlerts(responseObj, instance) {
         for (var i = 0; i < responseObj.alerts.length; i++) {
-            var cia = new GlideRecord('x_847006_cyberint_cyberint_alerts');
+            var cia = new GlideRecord('x_cyit_cyberint_cyberint_alerts');
             cia.addQuery('alert_id', '=', responseObj.alerts[i].ref_id);
             cia.query();
             exist_alert = cia.next();
@@ -212,7 +212,7 @@
     }
 
     try {
-        var instance = new GlideRecord('x_847006_cyberint_configuration');
+        var instance = new GlideRecord('x_cyit_cyberint_configuration');
         instance.addQuery('api_token', '!=', 0);
         instance.query();
         instance.next();
@@ -255,7 +255,7 @@
         <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
         <sys_mod_count>212</sys_mod_count>
         <sys_name>Cyberint_Pulling_Script</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>

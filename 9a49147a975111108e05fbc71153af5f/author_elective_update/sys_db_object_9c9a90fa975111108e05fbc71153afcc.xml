@@ -13,7 +13,7 @@
         <is_extendable>false</is_extendable>
         <label>CyberInt Alert</label>
         <live_feed_enabled>false</live_feed_enabled>
-        <name>x_847006_cyberint_cyberint_alert</name>
+        <name>x_cyit_cyberint_cyberint_alert</name>
         <number_ref display_value="CYB">589a90fa975111108e05fbc71153aff7</number_ref>
         <provider_class/>
         <read_access>true</read_access>
@@ -27,7 +27,7 @@
         <sys_id>9c9a90fa975111108e05fbc71153afcc</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>CyberInt Alert</sys_name>
-        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_db_object_9c9a90fa975111108e05fbc71153afcc</sys_update_name>
@@ -44,7 +44,7 @@
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
         <name>sys_db_object_9c9a90fa975111108e05fbc71153afcc</name>
-        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access>public</access><actions_access>true</actions_access><alter_access>true</alter_access><caller_access/><client_scripts_access>true</client_scripts_access><configuration_access>true</configuration_access><create_access>true</create_access><create_access_controls>false</create_access_controls><delete_access>true</delete_access><extension_model/><is_extendable>false</is_extendable><label>CyberInt Alert</label><live_feed_enabled>false</live_feed_enabled><name>x_847006_cyberint_cyberint_alert</name><number_ref display_value="CYB">589a90fa975111108e05fbc71153aff7</number_ref><provider_class/><read_access>true</read_access><scriptable_table>false</scriptable_table><super_class/><sys_class_code/><sys_class_name>sys_db_object</sys_class_name><sys_class_path/><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-17 10:12:04</sys_created_on><sys_id>9c9a90fa975111108e05fbc71153afcc</sys_id><sys_mod_count>5</sys_mod_count><sys_name>CyberInt Alert</sys_name><sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_db_object_9c9a90fa975111108e05fbc71153afcc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-17 11:16:19</sys_updated_on><update_access>true</update_access><user_role/><ws_access>true</ws_access></sys_db_object></record_update>]]></payload>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access>public</access><actions_access>true</actions_access><alter_access>true</alter_access><caller_access/><client_scripts_access>true</client_scripts_access><configuration_access>true</configuration_access><create_access>true</create_access><create_access_controls>false</create_access_controls><delete_access>true</delete_access><extension_model/><is_extendable>false</is_extendable><label>CyberInt Alert</label><live_feed_enabled>false</live_feed_enabled><name>x_cyit_cyberint_cyberint_alert</name><number_ref display_value="CYB">589a90fa975111108e05fbc71153aff7</number_ref><provider_class/><read_access>true</read_access><scriptable_table>false</scriptable_table><super_class/><sys_class_code/><sys_class_name>sys_db_object</sys_class_name><sys_class_path/><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-17 10:12:04</sys_created_on><sys_id>9c9a90fa975111108e05fbc71153afcc</sys_id><sys_mod_count>5</sys_mod_count><sys_name>CyberInt Alert</sys_name><sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_db_object_9c9a90fa975111108e05fbc71153afcc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-17 11:16:19</sys_updated_on><update_access>true</update_access><user_role/><ws_access>true</ws_access></sys_db_object></record_update>]]></payload>
         <payload_hash>709569894</payload_hash>
         <record_name>CyberInt Alert</record_name>
         <reverted_from/>
@@ -72,7 +72,7 @@
         <sys_metadata>9c9a90fa975111108e05fbc71153afcc</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>CyberInt Alert</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent/>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>

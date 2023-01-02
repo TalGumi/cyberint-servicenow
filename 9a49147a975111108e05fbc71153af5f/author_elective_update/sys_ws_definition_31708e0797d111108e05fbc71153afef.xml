@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
     <sys_ws_definition action="DELETE">
         <active>true</active>
-        <base_uri>/api/x_847006_cyberint/cyberint_connection_try</base_uri>
+        <base_uri>/api/x_cyit_cyberint/cyberint_connection_try</base_uri>
         <consumes>application/json,application/xml,text/xml</consumes>
         <consumes_customized>false</consumes_customized>
         <default_version>No active default version</default_version>
@@ -9,7 +9,7 @@
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
         <is_versioned>false</is_versioned>
         <name>CyberInt_Connection_Try</name>
-        <namespace>x_847006_cyberint</namespace>
+        <namespace>x_cyit_cyberint</namespace>
         <produces>application/json,application/xml,text/xml</produces>
         <produces_customized>false</produces_customized>
         <service_id>cyberint_connection_try</service_id>
@@ -20,7 +20,7 @@
         <sys_id>31708e0797d111108e05fbc71153afef</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>CyberInt_Connection_Try</sys_name>
-        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_ws_definition_31708e0797d111108e05fbc71153afef</sys_update_name>
@@ -34,7 +34,7 @@
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
         <name>sys_ws_definition_31708e0797d111108e05fbc71153afef</name>
-        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/x_847006_cyberint/cyberint_connection_try</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>CyberInt_Connection_Try</name><namespace>x_847006_cyberint</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>cyberint_connection_try</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-18 12:23:40</sys_created_on><sys_id>31708e0797d111108e05fbc71153afef</sys_id><sys_mod_count>0</sys_mod_count><sys_name>CyberInt_Connection_Try</sys_name><sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_ws_definition_31708e0797d111108e05fbc71153afef</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-18 12:23:40</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/x_cyit_cyberint/cyberint_connection_try</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>CyberInt_Connection_Try</name><namespace>x_cyit_cyberint</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>cyberint_connection_try</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-18 12:23:40</sys_created_on><sys_id>31708e0797d111108e05fbc71153afef</sys_id><sys_mod_count>0</sys_mod_count><sys_name>CyberInt_Connection_Try</sys_name><sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_ws_definition_31708e0797d111108e05fbc71153afef</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-18 12:23:40</sys_updated_on></sys_ws_definition></record_update>]]></payload>
         <payload_hash>-130701593</payload_hash>
         <record_name>CyberInt_Connection_Try</record_name>
         <reverted_from/>
@@ -62,7 +62,7 @@
         <sys_metadata>31708e0797d111108e05fbc71153afef</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>CyberInt_Connection_Try</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent/>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>

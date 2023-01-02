@@ -7,7 +7,7 @@
         <hint/>
         <name>Configuration</name>
         <order>100</order>
-        <roles>x_847006_cyberint.configuration_user</roles>
+        <roles>x_cyit_cyberint.configuration_user</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-09-06 15:26:27</sys_created_on>
@@ -17,7 +17,7 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Configuration</sys_name>
         <sys_overrides/>
-        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_app_application_1052acd9973511108e05fbc71153af1a</sys_update_name>
@@ -33,7 +33,7 @@
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
         <name>sys_app_application_1052acd9973511108e05fbc71153af1a</name>
-        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Configuration</name><order>100</order><roles>x_847006_cyberint.configuration_user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-09-06 15:26:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1052acd9973511108e05fbc71153af1a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Configuration</sys_name><sys_overrides/><sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_app_application_1052acd9973511108e05fbc71153af1a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-09-06 15:26:27</sys_updated_on><title>Configuration</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Configuration</name><order>100</order><roles>x_cyit_cyberint.configuration_user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-09-06 15:26:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1052acd9973511108e05fbc71153af1a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Configuration</sys_name><sys_overrides/><sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_app_application_1052acd9973511108e05fbc71153af1a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-09-06 15:26:27</sys_updated_on><title>Configuration</title><view_name/></sys_app_application></record_update>]]></payload>
         <payload_hash>1879821049</payload_hash>
         <record_name>Configuration</record_name>
         <reverted_from/>
@@ -61,7 +61,7 @@
         <sys_metadata>1052acd9973511108e05fbc71153af1a</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Configuration</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent/>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>

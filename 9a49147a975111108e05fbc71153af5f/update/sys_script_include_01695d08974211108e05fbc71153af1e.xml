@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_847006_cyberint.REST_API_CALL</api_name>
+        <api_name>x_cyit_cyberint.REST_API_CALL</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
         <description/>
@@ -12,14 +12,14 @@
 REST_API_CALL.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     getData: function() {
-        var r = new sn_ws.RESTMessageV2('x_847006_cyberint.Cyberint_API', 'POST - Fetch alerts from CyberInt');
+        var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'POST - Fetch alerts from CyberInt');
         var api_environment = this.getParameter('api_environment');
         var api_token = this.getParameter('api_token');
         var instance_name = this.getParameter('instance_name');
 		
         // For existing records
         if (instance_name) {
-            var instance = new GlideRecord('x_847006_cyberint_configuration');
+            var instance = new GlideRecord('x_cyit_cyberint_configuration');
             instance.addQuery('instance_name', '=', instance_name);
             instance.query();
             var instance_exist = instance.next();
@@ -44,7 +44,7 @@ REST_API_CALL.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_id>01695d08974211108e05fbc71153af1e</sys_id>
         <sys_mod_count>7</sys_mod_count>
         <sys_name>REST_API_CALL</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_script_include_01695d08974211108e05fbc71153af1e</sys_update_name>

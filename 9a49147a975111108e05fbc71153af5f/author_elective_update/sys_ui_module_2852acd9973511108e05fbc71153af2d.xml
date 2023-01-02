@@ -7,7 +7,7 @@
         <order/>
         <path/>
         <path_relative_to_root>false</path_relative_to_root>
-        <roles>x_847006_cyberint.configuration_user</roles>
+        <roles>x_cyit_cyberint.configuration_user</roles>
         <sys_class_name>sys_ui_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-09-06 15:26:27</sys_created_on>
@@ -16,13 +16,13 @@
         <sys_id>2852acd9973511108e05fbc71153af2d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Configurations</sys_name>
-        <sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_ui_module_2852acd9973511108e05fbc71153af2d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-09-06 15:26:27</sys_updated_on>
-        <table>x_847006_cyberint_configuration</table>
+        <table>x_cyit_cyberint_configuration</table>
         <uncancelable>false</uncancelable>
         <view_name/>
     </sys_ui_module>
@@ -33,7 +33,7 @@
         <instance_id>28cff10fdb3c0d10e62f3feb68961970</instance_id>
         <instance_name>dev120129</instance_name>
         <name>sys_ui_module_2852acd9973511108e05fbc71153af2d</name>
-        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Configuration">8d206d27c36203003e76741e81d3ae2f</application><filter/><name>Configurations</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_847006_cyberint.configuration_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-09-06 15:26:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>2852acd9973511108e05fbc71153af2d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Configurations</sys_name><sys_package display_value="CyberInt_try" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_ui_module_2852acd9973511108e05fbc71153af2d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-09-06 15:26:27</sys_updated_on><table>x_847006_cyberint_configuration</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Configuration">8d206d27c36203003e76741e81d3ae2f</application><filter/><name>Configurations</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_cyit_cyberint.configuration_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-09-06 15:26:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>2852acd9973511108e05fbc71153af2d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Configurations</sys_name><sys_package display_value="CyberInt_try" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="CyberInt_try">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_ui_module_2852acd9973511108e05fbc71153af2d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-09-06 15:26:27</sys_updated_on><table>x_cyit_cyberint_configuration</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
         <payload_hash>1280064261</payload_hash>
         <record_name>Configurations</record_name>
         <reverted_from/>
@@ -61,7 +61,7 @@
         <sys_metadata>2852acd9973511108e05fbc71153af2d</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Configurations</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_parent/>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>

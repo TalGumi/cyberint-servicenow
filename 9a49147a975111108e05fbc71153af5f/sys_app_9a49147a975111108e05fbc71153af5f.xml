@@ -18,10 +18,10 @@
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
-        <scope>x_847006_cyberint</scope>
+        <scope>x_cyit_cyberint</scope>
         <scoped_administration>false</scoped_administration>
         <short_description>Cyberint application allows you to control the company incidents. </short_description>
-        <source>x_847006_cyberint</source>
+        <source>x_cyit_cyberint</source>
         <store_correlation_id/>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
@@ -35,7 +35,7 @@
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
-        <user_role display_value="x_847006_cyberint.user" name="x_847006_cyberint.user">960aac76979111108e05fbc71153af2e</user_role>
+        <user_role display_value="x_cyit_cyberint.user" name="x_cyit_cyberint.user">960aac76979111108e05fbc71153af2e</user_role>
         <vendor/>
         <vendor_prefix/>
         <version>1.0.0</version>

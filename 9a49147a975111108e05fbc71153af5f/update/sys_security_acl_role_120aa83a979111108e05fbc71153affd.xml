@@ -5,15 +5,15 @@
         <sys_created_on>2022-08-17 11:19:39</sys_created_on>
         <sys_id>120aa83a979111108e05fbc71153affd</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_847006_cyberint_cyberint_alerts.x_847006_cyberint.cyberint_alerts_user</sys_name>
-        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_name>x_cyit_cyberint_cyberint_alerts.x_cyit_cyberint.cyberint_alerts_user</sys_name>
+        <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
-        <sys_security_acl display_value="x_847006_cyberint_cyberint_alerts">de0aa83a979111108e05fbc71153aff9</sys_security_acl>
+        <sys_security_acl display_value="x_cyit_cyberint_cyberint_alerts">de0aa83a979111108e05fbc71153aff9</sys_security_acl>
         <sys_update_name>sys_security_acl_role_120aa83a979111108e05fbc71153affd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-08-17 11:19:39</sys_updated_on>
-        <sys_user_role display_value="x_847006_cyberint.user" name="x_847006_cyberint.user">960aac76979111108e05fbc71153af2e</sys_user_role>
+        <sys_user_role display_value="x_cyit_cyberint.user" name="x_cyit_cyberint.user">960aac76979111108e05fbc71153af2e</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>
 </record_update>
