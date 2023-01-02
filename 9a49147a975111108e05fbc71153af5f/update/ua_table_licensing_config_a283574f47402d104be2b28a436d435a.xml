@@ -15,9 +15,9 @@
         <sys_id>a283574f47402d104be2b28a436d435a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_847006_cyberint_cyberint_alerts</sys_name>
-        <sys_package display_value="Cyberint ServiceNow Security App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Cyberint ServiceNow Security App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>ua_table_licensing_config_a283574f47402d104be2b28a436d435a</sys_update_name>
         <sys_updated_by>TalGumi</sys_updated_by>
         <sys_updated_on>2023-01-02 11:11:22</sys_updated_on>
