@@ -2,6 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="api_environment" table="x_847006_cyberint_configuration">
         <active>true</active>
         <array>false</array>
+        <array_denormalized>false</array_denormalized>
         <attributes/>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
@@ -29,7 +30,6 @@
         <element>api_environment</element>
         <element_reference>false</element_reference>
         <foreign_database/>
-        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
@@ -47,18 +47,21 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
+        <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-09-06 15:26:26</sys_created_on>
+        <sys_id>0d5d5af5971a5110a1b3bbc3f153af29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>API Environment</sys_name>
         <sys_package display_value="Cyberint" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_dictionary_x_847006_cyberint_configuration_api_environment</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-01-02 11:20:02</sys_updated_on>
+        <sys_updated_on>2023-01-02 11:32:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -66,7 +69,6 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
-        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>

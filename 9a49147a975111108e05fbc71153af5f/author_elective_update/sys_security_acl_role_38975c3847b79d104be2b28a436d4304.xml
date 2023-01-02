@@ -60,7 +60,7 @@
         <update_guid_history>2095d7c3324021109d853c6b541a2fd1:0,b220097860b31110b18a71c3cab4393d:-1894012306</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="">82c5d30797402110a1b3bbc3f153af55</sys_audit_delete>
+        <sys_audit_delete display_value="x_847006_cyberint_configuration.x_847006_cyberint.admin">82c5d30797402110a1b3bbc3f153af55</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-02 11:21:10</sys_created_on>
