@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="CyberInt Alerts" max_length="40" name="x_cyit_cyberint_cyberint_alerts" sizeclass="240" type="collection">
+    <element label="CyberInt Alerts" max_length="40" name="x_847006_cyberint_cyberint_alerts" type="collection">
         <element label="Acknowledged by" max_length="40" name="acknowledged_by" read_only="true" type="string"/>
         <element label="Acknowledged date" max_length="40" name="acknowledged_date" read_only="true" type="glide_date_time"/>
         <element label="Alert ID" mandatory="true" max_length="40" name="alert_id" read_only="true" type="string"/>
         <element default="False" label="Attachments" max_length="40" name="attachments" read_only="true" type="string"/>
         <element label="category" max_length="40" name="category" read_only="true" type="string"/>
         <element choice="1" label="Closure reason" max_length="40" name="closing_reason" type="string">
-            <choice>
-                <element inactive_on_update="false" label="False Positive" value="false_positive"/>
-                <element inactive_on_update="false" label="Irrelevant" value="irrelevant"/>
-                <element inactive_on_update="false" label="Resolved" value="resolved"/>
-            </choice>
+            <choice/>
         </element>
         <element label="Closure date" max_length="40" name="closing_time" read_only="true" type="glide_date_time"/>
         <element label="Closed by" max_length="40" name="closing_user" read_only="true" type="string"/>
@@ -27,21 +23,12 @@
         <element label="recommendation" max_length="1000" name="recommendation" read_only="true" type="string"/>
         <element label="Related entities" max_length="4000" name="related_entities" read_only="true" type="glide_list"/>
         <element choice="3" label="Severity" mandatory="true" max_length="40" name="severity" read_only="true" type="string">
-            <choice>
-                <element inactive_on_update="false" label="High" value="high"/>
-                <element inactive_on_update="false" label="Low" value="low"/>
-                <element inactive_on_update="false" label="Medium" value="medium"/>
-                <element inactive_on_update="false" label="Very High" value="very_high"/>
-            </choice>
+            <choice/>
         </element>
         <element label="source" max_length="40" name="source" read_only="true" type="string"/>
         <element label="Source category" max_length="40" name="source_category" read_only="true" type="string"/>
         <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="string">
-            <choice>
-                <element inactive_on_update="false" label="Acknowledged" value="acknowledged"/>
-                <element inactive_on_update="false" label="Closed" value="closed"/>
-                <element inactive="true" inactive_on_update="true" label="Open" value="open"/>
-            </choice>
+            <choice/>
         </element>
         <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
         <element label="Tags" max_length="4000" name="tags" read_only="true" type="glide_list"/>
