@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ticket_tab_configuration">
+    <ticket_tab_configuration action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <order/>
+        <parent/>
+        <script><![CDATA[/** * The script should evaluate true/false or `answer` populated with true/false which validates if a tab is visible  * The `current` object refers to the current Task(extension) record  **/ ]]></script>
+        <sys_class_name>ticket_tab_configuration</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-29 13:00:43</sys_created_on>
+        <sys_id>454c903c47b79d104be2b28a436d43b9</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>interaction_m2m_skill</sys_name>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>ticket_tab_configuration_454c903c47b79d104be2b28a436d43b9</sys_update_name>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2023-01-02 10:38:58</sys_updated_on>
+        <tab_name/>
+        <table/>
+        <type/>
+        <visible/>
+        <widget/>
+        <widget_param/>
+    </ticket_tab_configuration>
+    <sys_translated_text action="delete_multiple" query="documentkey=454c903c47b79d104be2b28a436d43b9"/>
+</record_update>
