@@ -99,7 +99,7 @@
 
                 var httpStatus = response.getStatusCode();
                 var responseBody = response.getBody();
-                gs.info(instance.instance_name + " - Close Alert " + current.alert_id + " Response Status (Close Alert) : " + httpStatus);
+                gs.info(instance.instance_name + " - Alert " + current.status + current.alert_id + " Response Status: " + httpStatus);
 
                 updateCloserData(current.alert_id);
             } catch (ex) {
@@ -108,7 +108,7 @@
 
             }
         } else {
-            gs.info(instance.instance_name + " - Close Alert : " + current.alert_id + " Alert not update");
+            gs.info(instance.instance_name + " - Alert not " + current.status + current.alert_id + " Alert not update");
         }
     }
 
@@ -119,7 +119,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3ced619997e111108e05fbc71153af7c</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>Mirroring</sys_name>
         <sys_overrides/>
         <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
@@ -127,7 +127,7 @@
         <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
         <sys_update_name>sys_script_3ced619997e111108e05fbc71153af7c</sys_update_name>
         <sys_updated_by>TalGumi</sys_updated_by>
-        <sys_updated_on>2023-01-02 13:43:50</sys_updated_on>
+        <sys_updated_on>2023-01-12 10:42:03</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>
