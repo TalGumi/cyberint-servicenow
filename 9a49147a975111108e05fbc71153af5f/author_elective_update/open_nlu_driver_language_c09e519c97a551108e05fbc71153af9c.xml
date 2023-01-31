@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="open_nlu_driver_language">
+    <open_nlu_driver_language action="DELETE">
+        <code>de</code>
+        <driver display_value="">64c023c17300330021a044764df6a70e</driver>
+        <driver_codes>de</driver_codes>
+        <language>German</language>
+        <sys_class_name>open_nlu_driver_language</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-22 07:00:01</sys_created_on>
+        <sys_id>c09e519c97a551108e05fbc71153af9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>German</sys_name>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>open_nlu_driver_language_c09e519c97a551108e05fbc71153af9c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-22 07:00:01</sys_updated_on>
+    </open_nlu_driver_language>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</application>
+        <file_path/>
+        <instance_id>caa8766edbd7d9909df22f17d4961926</instance_id>
+        <instance_name>ven05816</instance_name>
+        <name>open_nlu_driver_language_c09e519c97a551108e05fbc71153af9c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="open_nlu_driver_language">
+    <open_nlu_driver_language action="INSERT_OR_UPDATE">
+        <code>de</code>
+        <driver display_value="">64c023c17300330021a044764df6a70e</driver>
+        <driver_codes>de</driver_codes>
+        <language>German</language>
+        <sys_class_name>open_nlu_driver_language</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-22 07:00:01</sys_created_on>
+        <sys_id>c09e519c97a551108e05fbc71153af9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>German</sys_name>
+        <sys_package display_value="Cyberint" source="x_847006_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>open_nlu_driver_language_c09e519c97a551108e05fbc71153af9c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-22 07:00:01</sys_updated_on>
+    </open_nlu_driver_language>
+</record_update>]]></payload>
+        <payload_hash>275306757</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>da005cb047b79d104be2b28a436d4322</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>TalGumi</sys_created_by>
+        <sys_created_on>2022-12-13 10:55:25</sys_created_on>
+        <sys_id>a510d0f047b79d104be2b28a436d4350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1850b2001b70000001</sys_recorded_at>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2022-12-13 10:55:25</sys_updated_on>
+        <type>open_nlu_driver_language</type>
+        <update_guid>6510d0f06cb79d10ab6dd5d5d3705a50</update_guid>
+        <update_guid_history>6510d0f06cb79d10ab6dd5d5d3705a50:275306757</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="German">9abd078c47346d104be2b28a436d4369</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>TalGumi</sys_created_by>
+        <sys_created_on>2023-01-30 09:51:17</sys_created_on>
+        <sys_db_object display_value="" name="open_nlu_driver_language">open_nlu_driver_language</sys_db_object>
+        <sys_id>0b96578d0e734cd48548ad1c6cd0a8a9</sys_id>
+        <sys_metadata>c09e519c97a551108e05fbc71153af9c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>German</sys_name>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
+        <sys_update_name>open_nlu_driver_language_c09e519c97a551108e05fbc71153af9c</sys_update_name>
+        <sys_update_version display_value="open_nlu_driver_language_c09e519c97a551108e05fbc71153af9c">a510d0f047b79d104be2b28a436d4350</sys_update_version>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2023-01-30 09:51:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
