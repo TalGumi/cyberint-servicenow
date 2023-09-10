@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="4c739b0f47402d104be2b28a436d4398" label="CyberInt Alerts" max_length="40" name="x_cyit_cyberint_cyberint_alerts" type="collection">
+    <element label="CyberInt Alerts" max_length="40" name="x_cyit_cyberint_cyberint_alerts" sizeclass="0" type="collection">
         <element label="Acknowledged by" max_length="40" name="acknowledged_by" read_only="true" type="string"/>
         <element label="Acknowledged date" max_length="40" name="acknowledged_date" read_only="true" type="glide_date_time"/>
         <element label="Alert ID" mandatory="true" max_length="40" name="alert_id" read_only="true" type="string"/>
+        <element display="true" label="Assign To" max_length="32" name="assign_to" reference="sys_user" type="reference"/>
         <element default="False" label="Attachments" max_length="40" name="attachments" read_only="true" type="string"/>
         <element label="category" max_length="40" name="category" read_only="true" type="string"/>
         <element choice="1" label="Closure reason" max_length="40" name="closing_reason" type="string">
@@ -20,6 +21,7 @@
         <element label="Cyberint alert" max_length="4000" name="cyberint_alert" read_only="true" type="url"/>
         <element label="description" max_length="1000" name="description" read_only="true" type="string"/>
         <element label="environment" max_length="40" name="environment" read_only="true" type="string"/>
+        <element label="Assignments Groups" max_length="32" name="groups" reference="sys_user_group" type="reference"/>
         <element label="Impacts" max_length="4000" name="impacts" read_only="true" type="glide_list"/>
         <element label="Iocs" max_length="4000" name="iocs" read_only="true" type="glide_list"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
@@ -52,10 +54,16 @@
         <element label="type" max_length="40" name="type" read_only="true" type="string"/>
         <element label="Cyberint Updated Date" max_length="40" name="updated_date" read_only="true" type="glide_date_time"/>
         <index name="index">
-            <element name="sys_class_name"/>
+            <element name="assign_to"/>
         </index>
         <index name="index2">
             <element name="sys_domain"/>
+        </index>
+        <index name="index3">
+            <element name="groups"/>
+        </index>
+        <index name="index4">
+            <element name="sys_class_name"/>
         </index>
     </element>
 </database>
