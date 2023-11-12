@@ -3,6 +3,7 @@
         <active>true</active>
         <app_config display_value="">e4f5ae1d53e020106c4bddeeff7b1202</app_config>
         <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
         <event_mappings>[ ]</event_mappings>
         <macroponent display_value="Table Builder">4e813b17971111108e05fbc71153afad</macroponent>
         <macroponent_config>{
