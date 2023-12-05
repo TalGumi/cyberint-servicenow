@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4c739b0f47402d104be2b28a436d4398" label="CyberInt Alerts" max_length="40" name="x_cyit_cyberint_cyberint_alerts" type="collection">
+        <element label="Acknowledged by" max_length="40" name="acknowledged_by" read_only="true" type="string"/>
+        <element label="Acknowledged date" max_length="40" name="acknowledged_date" read_only="true" type="glide_date_time"/>
+        <element label="Alert ID" mandatory="true" max_length="40" name="alert_id" read_only="true" type="string"/>
+        <element display="true" label="Assign To" max_length="32" name="assign_to" reference="sys_user" type="reference"/>
+        <element default="False" label="Attachments" max_length="40" name="attachments" read_only="true" type="string"/>
+        <element label="category" max_length="40" name="category" read_only="true" type="string"/>
+        <element choice="1" label="Closure reason" max_length="40" name="closing_reason" type="string">
+            <choice>
+                <element inactive_on_update="false" label="False Positive" value="false_positive"/>
+                <element inactive_on_update="false" label="Irrelevant" value="irrelevant"/>
+                <element inactive_on_update="false" label="Resolved" value="resolved"/>
+            </choice>
+        </element>
+        <element label="Closure date" max_length="40" name="closing_time" read_only="true" type="glide_date_time"/>
+        <element label="Closed by" max_length="40" name="closing_user" read_only="true" type="string"/>
+        <element label="Confidence" max_length="40" name="confidence" read_only="true" type="integer"/>
+        <element label="Created by" max_length="40" name="created_by" read_only="true" type="string"/>
+        <element label="Cyberint Created Date" max_length="40" name="created_date" read_only="true" type="glide_date_time"/>
+        <element label="Cyberint alert" max_length="4000" name="cyberint_alert" read_only="true" type="url"/>
+        <element label="description" max_length="1000" name="description" read_only="true" type="string"/>
+        <element label="environment" max_length="40" name="environment" read_only="true" type="string"/>
+        <element label="Assignments Groups" max_length="32" name="groups" reference="sys_user_group" type="reference"/>
+        <element label="Impacts" max_length="4000" name="impacts" read_only="true" type="glide_list"/>
+        <element label="Iocs" max_length="4000" name="iocs" read_only="true" type="glide_list"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Publish date" max_length="40" name="publish_date" read_only="true" type="glide_date_time"/>
+        <element label="recommendation" max_length="1000" name="recommendation" read_only="true" type="string"/>
+        <element label="Related entities" max_length="4000" name="related_entities" read_only="true" type="glide_list"/>
+        <element choice="3" label="Severity" mandatory="true" max_length="40" name="severity" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="High" value="high"/>
+                <element inactive_on_update="false" label="Low" value="low"/>
+                <element inactive_on_update="false" label="Medium" value="medium"/>
+                <element inactive_on_update="false" label="Very High" value="very_high"/>
+            </choice>
+        </element>
+        <element label="source" max_length="40" name="source" read_only="true" type="string"/>
+        <element label="Source category" max_length="40" name="source_category" read_only="true" type="string"/>
+        <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Acknowledged" value="acknowledged"/>
+                <element inactive_on_update="false" label="Closed" value="closed"/>
+                <element inactive="true" inactive_on_update="true" label="Open" value="open"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element attributes="case_sensitive=true,edge_encryption_enabled=true" label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element label="Tags" max_length="4000" name="tags" read_only="true" type="glide_list"/>
+        <element label="Targeted brands" max_length="4000" name="targeted_brands" read_only="true" type="glide_list"/>
+        <element label="Targeted vectors" max_length="4000" name="targeted_vectors" read_only="true" type="glide_list"/>
+        <element label="Threat actor" max_length="40" name="threat_actor" read_only="true" type="string"/>
+        <element label="type" max_length="40" name="type" read_only="true" type="string"/>
+        <element label="Cyberint Updated Date" max_length="40" name="updated_date" read_only="true" type="glide_date_time"/>
+        <index name="index">
+            <element name="sys_domain_path"/>
+        </index>
+        <index name="index2">
+            <element name="groups"/>
+        </index>
+        <index name="index3">
+            <element name="assign_to"/>
+        </index>
+        <index name="index4">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index5">
+            <element name="sys_domain"/>
+        </index>
+    </element>
+</database>

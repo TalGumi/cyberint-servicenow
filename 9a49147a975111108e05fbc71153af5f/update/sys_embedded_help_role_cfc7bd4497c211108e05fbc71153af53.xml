@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role/>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-15 10:43:12</sys_created_on>
+        <sys_id>cfc7bd4497c211108e05fbc71153af53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b997390497c211108e05fbc71153aff5</sys_name>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_embedded_help_role_cfc7bd4497c211108e05fbc71153af53</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-15 10:43:12</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

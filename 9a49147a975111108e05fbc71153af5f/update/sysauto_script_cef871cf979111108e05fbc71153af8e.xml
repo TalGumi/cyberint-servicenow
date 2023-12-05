@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <max_drift/>
+        <name>Cyberint_Pulling_Script</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 00:10:00</run_period>
+        <run_start>2022-08-18 11:43:00</run_start>
+        <run_time>1970-01-01 08:01:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[(function executRule(current, previous) {
+
+    function attachments(alert_id, alert_sys_id, attachment_id, file_name, instance) {
+        var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'Get alert attachments');
+        var decrypted = instance.api_token.getDecryptedValue();
+
+        r.setStringParameter('alert_id', alert_id);
+        r.setStringParameter('attachment_id', attachment_id);
+        r.setStringParameter('api_environment', instance.api_environment);
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
+        var alert_file_name = alert_id + "_attachment_" + file_name;
+        r.saveResponseBodyAsAttachment('x_cyit_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
+
+        var response = r.executeAsync();
+        var httpResponseStatus = response.getStatusCode();
+        gs.debug(instance.instance_name + " - Add Attachment for alert " + alert_id + " : Status Code " + httpResponseStatus);
+        gs.info(instance.instance_name + " - Request Headers " + r.getRequestHeaders());
+    }
+
+    function analysisReport(alert_id, alert_sys_id, file_name, instance) {
+        var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'Get analysis report');
+        var decrypted = instance.api_token.getDecryptedValue();
+
+        r.setStringParameter('alert_id', alert_id);
+        r.setStringParameter('api_environment', instance.api_environment);
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
+        var alert_file_name = alert_id + "_analysisReport_" + file_name;
+        r.saveResponseBodyAsAttachment('x_cyit_cyberint_cyberint_alerts', alert_sys_id, alert_file_name);
+
+        var response = r.executeAsync();
+        var httpResponseStatus = response.getStatusCode();
+        gs.debug(instance.instance_name + " - Add Analysis Report for alert " + alert_id + " : Status Code " + httpResponseStatus);
+		gs.info(instance.instance_name + " - Request Headers " + r.getRequestHeaders());
+    }
+
+    function fetchAlerts(page) {
+        var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'POST - Fetch alerts from CyberInt');
+
+        // set cookie header with token from credentials table
+        var instance = new GlideRecord('x_cyit_cyberint_configuration');
+        instance.addQuery('api_token', '!=', 0);
+        instance.query();
+        instance.next();
+        var decrypted = instance.api_token.getDecryptedValue();
+
+        r.setStringParameter('api_environment', instance.api_environment);
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
+
+        // set body filters with fields from credentials table
+        var severities = instance.severity.toString().split(",");
+        var types = instance.type.toString().split(",");
+
+        var rightnow = new GlideDateTime();
+
+        var filters = {
+            "severity": severities,
+            "type": types,
+            "modification_date": {
+                "from": String(instance.last_fetch_time),
+                "to": String(rightnow)
+            }
+        };
+
+        if (instance.severity) {
+            if (instance.type) {
+                filters = {
+                    "severity": severities,
+                    "type": types,
+                    "modification_date": {
+                        "from": String(instance.last_fetch_time),
+                        "to": String(rightnow)
+                    }
+                };
+            } else {
+                filters = {
+                    "severity": severities,
+                    "modification_date": {
+                        "from": String(instance.last_fetch_time),
+                        "to": String(rightnow)
+                    }
+                };
+            }
+
+        } else {
+            if (instance.type) {
+                filters = {
+                    "type": types,
+                    "modification_date": {
+                        "from": String(instance.last_fetch_time),
+                        "to": String(rightnow)
+                    }
+                };
+            } else {
+                filters = {
+                    "modification_date": {
+                        "from": String(instance.last_fetch_time),
+                        "to": String(rightnow)
+                    }
+                };
+            }
+        }
+
+        var body = {
+            "page": page,
+            "size": 100,
+            "filters": filters
+        };
+
+        r.setRequestBody(JSON.stringify(body));
+		gs.info(instance.instance_name + " - Request Headers " + r.getRequestHeader('x-integration-source'));
+
+//         gs.info("Fetch Request Body: " + r.getRequestBody());
+        var response = r.executeAsync();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+
+        gs.debug(instance.instance_name + " - Fetch Response Status: " + httpStatus);
+//         gs.info("Fetch Response Body: " + responseBody);
+        var responseObj = JSON.parse(responseBody);
+        return [responseObj, instance];
+    }
+
+    function createAlerts(responseObj, instance) {
+        for (var i = 0; i < responseObj.alerts.length; i++) {
+            var cia = new GlideRecord('x_cyit_cyberint_cyberint_alerts');
+            cia.addQuery('alert_id', '=', responseObj.alerts[i].ref_id);
+            cia.query();
+            exist_alert = cia.next();
+            gs.info(instance.instance_name + ' - Alert ' + responseObj.alerts[i].ref_id + ' exist in ServiceNow? ' + exist_alert);
+            if (!exist_alert) {
+                // Create new alerts in ServiceNow
+                cia.initialize();
+            }
+            cia.alert_id = responseObj.alerts[i].ref_id;
+            cia.status = responseObj.alerts[i].status;
+            cia.description = responseObj.alerts[i].description;
+            cia.recommendation = responseObj.alerts[i].recommendation;
+            cia.source = responseObj.alerts[i].source;
+            cia.type = responseObj.alerts[i].type;
+            cia.category = responseObj.alerts[i].category;
+            cia.created_date = responseObj.alerts[i].created_date;
+            cia.severity = responseObj.alerts[i].severity;
+            cia.environment = responseObj.alerts[i].environment;
+            cia.created_date = responseObj.alerts[i].created_date;
+            cia.updated_date = responseObj.alerts[i].modification_date;
+            cia.acknowledged_by = responseObj.alerts[i].acknowledged_by;
+            if (responseObj.alerts[i].acknowledged_by) {
+                cia.acknowledged_by = responseObj.alerts[i].acknowledged_by.email;
+            }
+            cia.acknowledged_date = responseObj.alerts[i].acknowledged_date;
+            cia.confidence = responseObj.alerts[i].confidence;
+            cia.impacts = responseObj.alerts[i].impacts.toString();
+            cia.iocs = responseObj.alerts[i].iocs.toString();
+            cia.publish_date = responseObj.alerts[i].publish_date;
+            cia.source_category = responseObj.alerts[i].source_category;
+            cia.related_entities = responseObj.alerts[i].related_entities.toString();
+            cia.tags = responseObj.alerts[i].tags.toString();
+            cia.targeted_brands = responseObj.alerts[i].targeted_brands.toString();
+            cia.targeted_vectors = responseObj.alerts[i].targeted_vectors.toString();
+            cia.threat_actor = responseObj.alerts[i].threat_actor;
+            cia.cyberint_alert = "https://" + instance.api_environment + ".cyberint.io/alerts/alert/" + responseObj.alerts[i].ref_id;
+            if (!exist_alert) {
+                // Create new alerts in ServiceNow
+                cia.insert();
+                gs.info(instance.instance_name + ' - Alert ' + cia.alert_id + ' Created');
+                // Enrich Alerts
+                var alert_id = responseObj.alerts[i].ref_id;
+                var alert_sys_id = cia.getUniqueValue();
+                if (instance.enrich_alert) {
+                    gs.debug(instance.instance_name + " Enrich Alert : TRUE");
+                    if (responseObj.alerts[i].attachments[0]) {
+                        for (var j = 0; j < responseObj.alerts[i].attachments.length; j++) {
+                            var attachment_id = responseObj.alerts[i].attachments[j].id;
+                            var attachments_file_name = responseObj.alerts[i].attachments[j].name;
+                            attachments(alert_id, alert_sys_id, attachment_id, attachments_file_name, instance);
+                        }
+                    }
+                    cia.attachments = "True";
+
+                    if (responseObj.alerts[i].analysis_report) {
+                        var analysis_report_file_name = responseObj.alerts[i].analysis_report.name;
+                        analysisReport(alert_id, alert_sys_id, analysis_report_file_name, instance);
+                    }
+                }
+            } else {
+                // Update exist alerts in ServiceNow
+                cia.update();
+                gs.info(instance.instance_name + ' - Alert ' + cia.alert_id + ' Updated');
+            }
+            var instance_last_fetch_time = instance.last_fetch_time;
+            if (instance_last_fetch_time < responseObj.alerts[i].modification_date) {
+                instance_last_fetch_time = responseObj.alerts[i].modification_date;
+            }
+            gs.debug(instance.instance_name + ' - Last fetch time: ' + instance.last_fetch_time);
+        }
+        return instance_last_fetch_time;
+    }
+
+    try {
+        var instance = new GlideRecord('x_cyit_cyberint_configuration');
+        instance.addQuery('api_token', '!=', 0);
+        instance.query();
+        instance.next();
+        // Check if instance is active 
+        if (instance.status == 'Enable') {
+            gs.info(instance.instance_name + " - Instance Status is " + instance.status + " ; Start Pulling ");
+            var x = 1;
+            var total_alerts_to_fetch = 1;
+            while (total_alerts_to_fetch > 0) {
+                var fetchValues = fetchAlerts(x);
+                var responseObject = fetchValues[0];
+                var sn_instance = fetchValues[1];
+
+                gs.info(sn_instance.instance_name + " - Total alerts: " + responseObject.total);
+                total_alerts_to_fetch = responseObject.total;
+                var last_fetch_time = createAlerts(responseObject, sn_instance);
+                total_alerts_to_fetch -= (100 * x);
+                x++;
+                if (total_alerts_to_fetch > 0) {
+                    gs.info(sn_instance.instance_name + " : " + total_alerts_to_fetch + " more to fetch");
+                }
+            }
+            gs.info(sn_instance.instance_name + " - Finish fetch alerts");
+            sn_instance.last_fetch_time = last_fetch_time;
+            gs.debug(sn_instance.instance_name + " - last_fetch_time : " + sn_instance.last_fetch_time);
+			sn_instance.script_last_run_time = new GlideDateTime();
+            sn_instance.update();
+        } else {
+            gs.info(instance.instance_name + " - Instance Status is " + instance.status);
+        }
+    } catch (ex) {
+        var message = ex.message;
+        gs.info(message);
+
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-18 11:45:31</sys_created_on>
+        <sys_id>cef871cf979111108e05fbc71153af8e</sys_id>
+        <sys_mod_count>219</sys_mod_count>
+        <sys_name>Cyberint_Pulling_Script</sys_name>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sysauto_script_cef871cf979111108e05fbc71153af8e</sys_update_name>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2023-11-26 11:19:08</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

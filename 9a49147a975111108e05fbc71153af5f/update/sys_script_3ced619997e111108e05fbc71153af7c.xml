@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_cyit_cyberint_cyberint_alerts</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Mirroring</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    function updateCloserData(alert_id) {
+        var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'GET single alert');
+        var instance = new GlideRecord('x_cyit_cyberint_configuration');
+
+        instance.addQuery('api_token', '!=', 0);
+        instance.query();
+        instance.next();
+
+        r.setStringParameter('api_environment', instance.api_environment);
+        r.setStringParameter('alert_id', alert_id);
+        var decrypted = instance.api_token.getDecryptedValue();
+
+        r.setRequestHeader("Cookie", "access_token=" + decrypted);
+        var response = r.executeAsync();
+        var responseStatusCode = response.getStatusCode();
+        var responseBody = response.getBody();
+        var responseObj = JSON.parse(responseBody);
+
+        gs.info(instance.instance_name + " : UPDATE Alert " + alert_id + " closed by. Status code: " + responseStatusCode);
+
+        var cia = new GlideRecord('x_cyit_cyberint_cyberint_alerts');
+        cia.addQuery('alert_id', '=', alert_id);
+        cia.query();
+        exist_alert = cia.next();
+        if (exist_alert) {
+            cia.closing_user = responseObj.alert.closed_by.email;
+            cia.update();
+        }
+    }
+    // Add your code here
+
+    if (current.status != "open") {
+        if (current.status == 'acknowledged' || (current.status == 'closed' && current.closing_reason)) {
+            try {
+                var r = new sn_ws.RESTMessageV2('x_cyit_cyberint.Cyberint_API', 'PUT - Update Alerts in CyberInt');
+
+                var instance = new GlideRecord('x_cyit_cyberint_configuration');
+
+                instance.addQuery('api_token', '!=', 0);
+                instance.query();
+                instance.next();
+
+                r.setStringParameter('api_environment', instance.api_environment);
+                var decrypted = instance.api_token.getDecryptedValue();
+
+                r.setRequestHeader("Cookie", "access_token=" + decrypted);
+
+                var data = {
+                    "status": String(current.status),
+                    "closure_reason": String(current.closing_reason)
+                };
+
+                if (current.status == 'acknowledged') {
+                    data = {
+                        "status": String(current.status)
+                    };
+                }
+
+                var body = {
+                    "alert_ref_ids": [String(current.alert_id)],
+                    "data": data
+                };
+
+                r.setRequestBody(JSON.stringify(body));
+
+                var RequestBody = r.getRequestBody();
+                var RequestHeader = r.getRequestHeader('Cookie');
+                var response = r.executeAsync();
+
+                var httpStatus = response.getStatusCode();
+                var responseBody = response.getBody();
+                gs.info(instance.instance_name + " - Alert " + current.status + current.alert_id + " Response Status: " + httpStatus);
+
+                updateCloserData(current.alert_id);
+            } catch (ex) {
+                var message = ex.message;
+                gs.info(message);
+
+            }
+        } else {
+            gs.info(instance.instance_name + " - Alert not " + current.status + current.alert_id + " Alert not update");
+        }
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-25 12:05:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3ced619997e111108e05fbc71153af7c</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>Mirroring</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_script_3ced619997e111108e05fbc71153af7c</sys_update_name>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2023-01-12 10:42:03</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=3ced619997e111108e05fbc71153af7c"/>
+</record_update>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>cms</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_cyit_cyberint_support_ui_page.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<!-- Get values from dialog preferences passed in -->
+
+
+<!-- Set up form fields and labels -->
+
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+<body style="margin-top: 5px; font-size: 14px; margin-left: 20px; ">
+<img src="data:image/png;base64,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" alt="Cyberint" width="260" height="80"></img>
+	<p> This screen displays the Setting up, CyberInt support link, and documentation information</p>
+	<br></br>
+<h2>Setting-up the Cyberint ServiceNow Security App</h2>
+	<p> The ServiceNow system administrator is required to provide the API access token in the Cyberint ServiceNow Security App.</p>
+	<p> This enables the Cyberint ServiceNow security app to connect with your Cyberint instance.</p>
+	<p> After the connection is established, the Cyberint ServiceNow Security App will import all the available Threat Command alerts to ServiceNow as incidents.</p>    
+	<p> If you do not have an API access token, contact your Cyberint administrator.</p>
+<h4> Properties:</h4>
+	<ul>
+	  <li>You must be the ServiceNow system administrator</li>
+	  <li>You must have an API access token</li>
+	  <li>In the API Token field, enter the API access token</li>
+	</ul>
+<h4> Procedure:</h4>
+	<ol>
+		<li>Log-in to ServiceNow as a system administrator</li>
+		<li>Navigate to left navigation page > Cyberint ServiceNow Security App > Configurations</li>
+		<li>In the API Token field, enter the API access token</li>
+		<li>In the API Environment field, enter the API environment</li>
+		<li>Click Check Connection. The system validates the API environment and API token</li>
+		<li>In the Select Type to fetch the Alerts field, select the ETP Suite alert types to import</li>
+		<li>In the Select Severity to fetch the Alerts field, select the ETP Suite alert severities to import</li>
+		<li>From the Last Fetch Time, select the start date to import alerts. <br>(Note: By default, The Severity, Category, Source, Environment and Type fields to fetch the Alerts are selected to All and Last Fetch Time is selected for last 1 month)</br></li>
+  <li>Click Submit. The system again validates the API environment and API token. Upon successful validation, a job runs that imports all the open alerts from your ETP Suite</li>
+</ol>
+	<br></br>
+	<h3>Contact Cyberint</h3>
+	
+	<p>
+		<i class="fa fa-envelope" style="font-size:24px; margin: 4px;"></i>
+		Support mail: <a href="mailto:support@cyberint.com"> support@cyberint.com </a></p>
+	<p>
+		<i class="fa fa-at" style="font-size:30px; margin: 4px;"></i>
+		<a href="https://cyberint.com/customer-support/" target="_blank" rel="noopener noreferrer nofollow">For more information, please visit Cyberint suppport page</a> </p><br></br>
+
+</body>
+<!-- 	<footer style="background-color:#dfdfdd;"> Tal </footer>
+ -->
+</html>
+</j:jelly>]]></html>
+        <name>support_ui_page</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-18 14:58:17</sys_created_on>
+        <sys_id>858c4e4197c611108e05fbc71153afbf</sys_id>
+        <sys_mod_count>89</sys_mod_count>
+        <sys_name>support_ui_page</sys_name>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_ui_page_858c4e4197c611108e05fbc71153afbf</sys_update_name>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2023-01-16 10:15:52</sys_updated_on>
+    </sys_ui_page>
+</record_update>
