@@ -22,6 +22,7 @@
             </choice>
         </element>
         <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element attributes="case_sensitive=true,edge_encryption_enabled=true" label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
         <element choice="1" label="Type" max_length="4000" name="type" type="glide_list">
             <choice>
                 <element inactive_on_update="false" label="automated attack tools" value="automated_attack_tools"/>
@@ -64,6 +65,9 @@
         <element label="Updated date" max_length="40" name="updated_date" type="glide_date_time"/>
         <index name="index">
             <element name="sys_domain"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain_path"/>
         </index>
     </element>
 </database>
