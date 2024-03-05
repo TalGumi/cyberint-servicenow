@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_headers">
+    <sys_rest_message_headers action="INSERT_OR_UPDATE">
+        <name>X-Integration-Version</name>
+        <rest_message display_value="Cyberint_API">b30eb90497e911108e05fbc71153affc</rest_message>
+        <sys_class_name>sys_rest_message_headers</sys_class_name>
+        <sys_created_by>KirillL</sys_created_by>
+        <sys_created_on>2024-01-22 13:54:49</sys_created_on>
+        <sys_id>37d4ee0b97b7311082e2babfe153afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>X-Integration-Version</sys_name>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_rest_message_headers_37d4ee0b97b7311082e2babfe153afc8</sys_update_name>
+        <sys_updated_by>KirillL</sys_updated_by>
+        <sys_updated_on>2024-01-22 13:54:49</sys_updated_on>
+        <value>${x_integration_version}</value>
+    </sys_rest_message_headers>
+</record_update>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">be6b7aa69713111082e2babfe153afee</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>TalGumi</sys_created_by>
+        <sys_created_on>2024-01-04 17:32:57</sys_created_on>
+        <sys_id>165aa659876bf5500106326e0ebb3542</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_updated_by>TalGumi</sys_updated_by>
+        <sys_updated_on>2024-01-04 17:32:57</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

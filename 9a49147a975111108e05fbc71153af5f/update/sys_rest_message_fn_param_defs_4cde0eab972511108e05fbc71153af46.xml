@@ -2,7 +2,7 @@
     <sys_rest_message_fn_param_defs action="INSERT_OR_UPDATE">
         <name>alert_id</name>
         <order>100</order>
-        <rest_message_function display_value="Get analysis report">c25e46eb972511108e05fbc71153af0f</rest_message_function>
+        <rest_message_function display_value="GET - Analysis report">c25e46eb972511108e05fbc71153af0f</rest_message_function>
         <sys_class_name>sys_rest_message_fn_param_defs</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-09-01 13:11:06</sys_created_on>

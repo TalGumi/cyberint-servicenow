@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_headers">
     <sys_rest_message_headers action="INSERT_OR_UPDATE">
-        <name>x-integration-source</name>
+        <name>X-Integration-Instance-Id</name>
         <rest_message display_value="Cyberint_API">b30eb90497e911108e05fbc71153affc</rest_message>
         <sys_class_name>sys_rest_message_headers</sys_class_name>
-        <sys_created_by>TalGumi</sys_created_by>
-        <sys_created_on>2023-11-26 11:03:21</sys_created_on>
-        <sys_id>4efa94f087fef5100106326e0ebb35da</sys_id>
+        <sys_created_by>KirillL</sys_created_by>
+        <sys_created_on>2024-01-22 13:54:49</sys_created_on>
+        <sys_id>ddd4664b97b7311082e2babfe153af04</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x-integration-source</sys_name>
+        <sys_name>X-Integration-Instance-Id</sys_name>
         <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
-        <sys_update_name>sys_rest_message_headers_4efa94f087fef5100106326e0ebb35da</sys_update_name>
-        <sys_updated_by>TalGumi</sys_updated_by>
-        <sys_updated_on>2023-11-26 11:03:21</sys_updated_on>
-        <value>ServiceNow</value>
+        <sys_update_name>sys_rest_message_headers_ddd4664b97b7311082e2babfe153af04</sys_update_name>
+        <sys_updated_by>KirillL</sys_updated_by>
+        <sys_updated_on>2024-01-22 13:54:49</sys_updated_on>
+        <value>${x_integration_instance_id}</value>
     </sys_rest_message_headers>
 </record_update>

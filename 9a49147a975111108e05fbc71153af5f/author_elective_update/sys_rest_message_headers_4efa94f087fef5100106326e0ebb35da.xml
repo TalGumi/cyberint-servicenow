@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_headers">
+    <sys_rest_message_headers action="DELETE">
+        <name>x-integration-source</name>
+        <rest_message display_value="Cyberint_API">b30eb90497e911108e05fbc71153affc</rest_message>
+        <sys_class_name>sys_rest_message_headers</sys_class_name>
+        <sys_created_by>TalGumi</sys_created_by>
+        <sys_created_on>2023-11-26 11:03:21</sys_created_on>
+        <sys_id>4efa94f087fef5100106326e0ebb35da</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>x-integration-source</sys_name>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_update_name>sys_rest_message_headers_4efa94f087fef5100106326e0ebb35da</sys_update_name>
+        <sys_updated_by>KirillL</sys_updated_by>
+        <sys_updated_on>2024-01-19 15:34:31</sys_updated_on>
+        <value>${x_integration_source}</value>
+    </sys_rest_message_headers>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</application>
+        <file_path/>
+        <instance_id>caa8766edbd7d9909df22f17d4961926</instance_id>
+        <instance_name>ven05816</instance_name>
+        <name>sys_rest_message_headers_4efa94f087fef5100106326e0ebb35da</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_headers"><sys_rest_message_headers action="INSERT_OR_UPDATE"><name>x-integration-source</name><rest_message display_value="Cyberint_API">b30eb90497e911108e05fbc71153affc</rest_message><sys_class_name>sys_rest_message_headers</sys_class_name><sys_created_by>TalGumi</sys_created_by><sys_created_on>2023-11-26 11:03:21</sys_created_on><sys_id>4efa94f087fef5100106326e0ebb35da</sys_id><sys_mod_count>5</sys_mod_count><sys_name>x-integration-source</sys_name><sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package><sys_policy/><sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope><sys_update_name>sys_rest_message_headers_4efa94f087fef5100106326e0ebb35da</sys_update_name><sys_updated_by>KirillL</sys_updated_by><sys_updated_on>2024-01-19 15:34:31</sys_updated_on><value>${x_integration_source}</value></sys_rest_message_headers></record_update>]]></payload>
+        <payload_hash>-105745435</payload_hash>
+        <record_name>x-integration-source</record_name>
+        <reverted_from/>
+        <source>76d7edf0873b79100106326e0ebb35a3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>KirillL</sys_created_by>
+        <sys_created_on>2024-01-19 15:34:31</sys_created_on>
+        <sys_id>e51f134a87f3bd100106326e0ebb35ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d225c01720000001</sys_recorded_at>
+        <sys_updated_by>KirillL</sys_updated_by>
+        <sys_updated_on>2024-01-19 15:34:31</sys_updated_on>
+        <type>HTTP Headers</type>
+        <update_guid>6d1f134a86f3bd10e2693287e9abdbe9</update_guid>
+        <update_guid_history>6d1f134a86f3bd10e2693287e9abdbe9:-105745435,14b27789d77fb910f9ca18898e7810d5:1470591873,21744701cbfbb9106f49ed813ccbb856:511983798,7c267a056bbbb910862253ac6cac6c44:-67209631,e1e5f24186bbb9107ce103e8c3586ae4:-1704353382,4b2b98f072fef510bf61b961d4bc222b:-67209631</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>KirillL</sys_created_by>
+        <sys_created_on>2024-01-25 09:46:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_headers">sys_rest_message_headers</sys_db_object>
+        <sys_id>e4262c0d475649af9f6173c633e76c39</sys_id>
+        <sys_metadata>4efa94f087fef5100106326e0ebb35da</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x-integration-source</sys_name>
+        <sys_package display_value="Cyberint App" source="x_cyit_cyberint">9a49147a975111108e05fbc71153af5f</sys_package>
+        <sys_parent display_value="Cyberint_API">b30eb90497e911108e05fbc71153affc</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Cyberint App">9a49147a975111108e05fbc71153af5f</sys_scope>
+        <sys_scope_delete display_value="">20a118545962435487a56626089ddfc9</sys_scope_delete>
+        <sys_update_name>sys_rest_message_headers_4efa94f087fef5100106326e0ebb35da</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_headers_4efa94f087fef5100106326e0ebb35da">e51f134a87f3bd100106326e0ebb35ea</sys_update_version>
+        <sys_updated_by>KirillL</sys_updated_by>
+        <sys_updated_on>2024-01-25 09:46:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -56,6 +56,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>company_name</element>
+            <position>4</position>
+            <sys_created_by>KirillL</sys_created_by>
+            <sys_created_on>2024-01-19 19:20:20</sys_created_on>
+            <sys_id>e1c2941687b7bd100106326e0ebb35c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Configuration" display_value="Configuration" name="x_cyit_cyberint_configuration" sys_domain="global" view="Default view">72f72091977511108e05fbc71153af10</sys_ui_section>
+            <sys_updated_by>KirillL</sys_updated_by>
+            <sys_updated_on>2024-01-19 19:20:20</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Configuration</caption>
             <header>false</header>
